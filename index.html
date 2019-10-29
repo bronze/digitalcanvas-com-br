@@ -12,11 +12,13 @@
       body {
         background-repeat: no-repeat;
         background-position: center center;
-        background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-206.jpg);
         background-size: cover;
       }
       html.webp body {
         background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-206.webp);
+      }
+      html:not(.webp) body {
+        background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-206.jpg);
       }
     </style>
   </head>
