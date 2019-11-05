@@ -39,9 +39,9 @@
         <!-- /NAV -->
         <!-- TEXT -->
         <div class="uk-container uk-container-small uk-flex-auto uk-text-center">
-          <h1 class="uk-heading-primary animate uk-animation-slide-bottom-small" style="font-weight: 700;">My playground.</h1>
+          <h1 id="quote"class="uk-heading-primary animate uk-animation-slide-bottom-small" style="font-weight: 700;">My playground.</h1>
           <div class="uk-width-4-5@m uk-margin-auto animate uk-animation-slide-bottom-small">
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad, reiciendis maxime, facilis nam natus incidunt provident.</p>
+            <p id="by" class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad, reiciendis maxime, facilis nam natus incidunt provident.</p>
           </div>
         </div>
         <!-- /TEXT -->
@@ -52,5 +52,26 @@
         <!-- /FOOT -->
       </div>
     </div>
+    <script>
+      // https://codepen.io/djorborn/pen/weLQpy
+      function getQuote(){
+        var text = document.getElementById('quote');
+        var author = document.getElementById('by');
+        $.getJSON("quotes.json", function(json) {
+          var ranNum = Math.floor(Math.random()*json.length); 
+          var qText = '"' + json[ranNum]["quoteText"] + '"';
+          var qAuth = "-" + json[ranNum]["quoteAuthor"];
+          text.innerHTML = qText;
+          author.innerHTML = qAuth;
+          $('#tweet').attr('href', "https://twitter.com/intent/tweet?text=" + qText + " " + qAuth);
+          $('#tweet').on('click', function(){
+            $(this).attr('target', '_blank');
+          })
+        });
+      }
+      $(document).ready(function() {
+        getQuote();
+      });
+    </script>
   </body>
 </html>
