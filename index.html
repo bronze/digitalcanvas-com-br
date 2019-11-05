@@ -60,6 +60,21 @@
       function getQuote(){
         var text = document.getElementById('quote');
         var author = document.getElementById('by');
+        // http://youmightnotneedjquery.com/
+//         var request = new XMLHttpRequest();
+//         request.open('GET', 'quotes.json', true);
+//         request.onload = function() {
+//           if (this.status >= 200 && this.status < 400) {
+//             // Success!
+//             var data = JSON.parse(this.response);
+//           } else {
+//             // We reached our target server, but it returned an error
+//           }
+//         };
+//         request.onerror = function() {
+//           // There was a connection error of some sort
+//         };
+//         request.send();
         $.getJSON("quotes.json", function(json) {
           var ranNum = Math.floor(Math.random()*json.length); 
           var qText = '"' + json[ranNum]["quoteText"] + '"';
