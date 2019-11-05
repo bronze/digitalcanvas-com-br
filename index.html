@@ -68,9 +68,16 @@
           author.innerHTML = qAuth;
         });
       }
-      $(document).ready(function() {
-        getQuote();
-      });
+      //$(document).ready(function() {
+      //  getQuote();
+      //});
+      function ready(fn) {
+        if (document.readyState != 'loading'){
+          getQuote();
+        } else {
+          document.addEventListener('DOMContentLoaded', fn);
+        }
+      }
     </script>
   </body>
 </html>
