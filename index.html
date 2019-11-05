@@ -20,6 +20,21 @@
       html:not(.webp) body {
         background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-206.jpg);
       }
+      q,
+      #quote,
+      blockquote {
+        quotes: "\201C" "\201D" "\2018" "\2019";
+      }
+      q:before,
+      #quote,
+      blockquote:before {
+        content: open-quote;
+      }
+      q:after,
+      #quote,
+      blockquote:after {
+        content: close-quote;
+      }
     </style>
   </head>
   <body>
