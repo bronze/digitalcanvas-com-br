@@ -73,11 +73,14 @@
       //});
       function ready(fn) {
         if (document.readyState != 'loading'){
-          getQuote();
+          fn();
         } else {
           document.addEventListener('DOMContentLoaded', fn);
         }
       }
+      ready(function() { 
+        getQuote();
+      });
     </script>
   </body>
 </html>
