@@ -66,10 +66,6 @@
           var qAuth = "-" + json[ranNum]["quoteAuthor"];
           text.innerHTML = qText;
           author.innerHTML = qAuth;
-          $('#tweet').attr('href', "https://twitter.com/intent/tweet?text=" + qText + " " + qAuth);
-          $('#tweet').on('click', function(){
-            $(this).attr('target', '_blank');
-          })
         });
       }
       $(document).ready(function() {
