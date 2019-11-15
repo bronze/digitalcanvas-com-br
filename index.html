@@ -52,23 +52,27 @@
           background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-640.jpg);
         }
       }
-      q,
-      #quote,
-      blockquote {
+      q:not(.hide),
+      #quote:not(.hide),
+      blockquote:not(.hide) {
         quotes: "\201C" "\201D" "\2018" "\2019";
       }
-      q:before,
-      #quote:before,
-      blockquote:before {
+      q:not(.hide):before,
+      #quote:not(.hide):before,
+      blockquote:not(.hide):before {
         content: open-quote;
         font-family:"Times New Roman";
       }
-      q:after,
-      #quote:after,
-      blockquote:after {
+      q:not(.hide):after,
+      #quote:not(.hide):after,
+      blockquote:not(.hide):after {
         content: close-quote;
         font-family:"Times New Roman";
       }
+      #by:not(.hide):before {
+        content: "― ";
+      }
+      .animate { animation-delay: 0.3s;}
     </style>
   </head>
   <body>
@@ -89,9 +93,9 @@
         <!-- /NAV -->
         <!-- TEXT -->
         <div class="uk-container uk-container-small uk-flex-auto uk-text-center">
-          <h1 id="quote"class="uk-heading-primary animate uk-animation-slide-bottom-small" style="font-weight: 700;">My playground.</h1>
-          <div class="uk-width-4-5@m uk-margin-auto animate uk-animation-slide-bottom-small">
-            <p id="by" class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad, reiciendis maxime, facilis nam natus incidunt provident.</p>
+          <h1 id="quote" class="uk-heading-primary hide" style="font-weight: 700;"></h1>
+          <div class="uk-width-4-5@m uk-margin-auto">
+            <p id="by" class="lead hide"></p>
           </div>
         </div>
         <!-- /TEXT -->
@@ -128,7 +132,7 @@
           var ranNum = Math.floor(Math.random()*json.length);
 //           var qText = '“' + json[ranNum]["quoteText"] + '”';
           var qText = json[ranNum]["quoteText"];
-          var qAuth = "― " + json[ranNum]["quoteAuthor"];
+          var qAuth = json[ranNum]["quoteAuthor"];
           text.innerHTML = qText;
           author.innerHTML = qAuth;
         });
@@ -145,6 +149,8 @@
       }
       ready(function() {
         getQuote();
+        $( "#quote" ).removeClass("hide").addClass("animate uk-animation-slide-bottom-small");
+        $( "#by" ).removeClass("hide").addClass("animate uk-animation-slide-bottom-small");
       });
     </script>
   </body>
