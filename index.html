@@ -20,6 +20,38 @@
       html:not(.webp) body {
         background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-206.jpg);
       }
+      @media only screen and  (min-width: 1600px) {
+        html.webp #bg-image {
+          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-2000.webp);
+        }
+        html:not(.webp) #bg-image {
+          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-2000.jpg);
+        }
+      }
+      @media only screen and (max-width: 1200px) {
+        html.webp #bg-image {
+          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-1200.webp);
+        }
+        html:not(.webp) #bg-image {
+          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-1200.jpg);
+        }
+      }
+      @media only screen and (max-width: 960px) {
+        html.webp #bg-image {
+          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-960.webp);
+        }
+        html:not(.webp) #bg-image {
+          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-960.jpg);
+        }
+      }
+      @media only screen and (max-width: 640px) {
+        html.webp #bg-image {
+          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-640.webp);
+        }
+        html:not(.webp) #bg-image {
+          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-640.jpg);
+        }
+      }
       q,
       #quote,
       blockquote {
@@ -93,7 +125,7 @@
 //         };
 //         request.send();
         $.getJSON("quotes.json", function(json) {
-          var ranNum = Math.floor(Math.random()*json.length); 
+          var ranNum = Math.floor(Math.random()*json.length);
 //           var qText = '“' + json[ranNum]["quoteText"] + '”';
           var qText = json[ranNum]["quoteText"];
           var qAuth = "― " + json[ranNum]["quoteAuthor"];
@@ -111,7 +143,7 @@
           document.addEventListener('DOMContentLoaded', fn);
         }
       }
-      ready(function() { 
+      ready(function() {
         getQuote();
       });
     </script>
