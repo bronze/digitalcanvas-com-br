@@ -54,24 +54,24 @@
           background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-640.jpg);
         }
       }
-      q:not(.hide),
-      #quote:not(.hide),
-      blockquote:not(.hide) {
+      q,
+      #quote,
+      blockquote {
         quotes: "\201C" "\201D" "\2018" "\2019";
       }
-      q:not(.hide):before,
-      #quote:not(.hide):before,
-      blockquote:not(.hide):before {
+      q:before,
+      #quote:before,
+      blockquote:before {
         content: open-quote;
         font-family:"Times New Roman";
       }
-      q:not(.hide):after,
-      #quote:not(.hide):after,
-      blockquote:not(.hide):after {
+      q:after,
+      #quote:after,
+      blockquote:after {
         content: close-quote;
         font-family:"Times New Roman";
       }
-      #by:not(.hide):before {
+      #by:before {
         content: "― ";
       }
       .animate { animation-delay: 0.3s;}
@@ -110,50 +110,6 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-    <script>
-      // https://codepen.io/djorborn/pen/weLQpy
-      function getQuote(){
-        var text = document.getElementById('quote');
-        var author = document.getElementById('by');
-        // http://youmightnotneedjquery.com/
-//         var request = new XMLHttpRequest();
-//         request.open('GET', 'quotes.json', true);
-//         request.onload = function() {
-//           if (this.status >= 200 && this.status < 400) {
-//             // Success!
-//             var data = JSON.parse(this.response);
-//           } else {
-//             // We reached our target server, but it returned an error
-//           }
-//         };
-//         request.onerror = function() {
-//           // There was a connection error of some sort
-//         };
-//         request.send();
-        $.getJSON("quotes.json", function(json) {
-          var ranNum = Math.floor(Math.random()*json.length);
-//           var qText = '“' + json[ranNum]["quoteText"] + '”';
-          var qText = json[ranNum]["quoteText"];
-          var qAuth = json[ranNum]["quoteAuthor"];
-          text.innerHTML = qText;
-          author.innerHTML = qAuth;
-        });
-      }
-      //$(document).ready(function() {
-      //  getQuote();
-      //});
-      function ready(fn) {
-        if (document.readyState != 'loading'){
-          fn();
-        } else {
-          document.addEventListener('DOMContentLoaded', fn);
-        }
-      }
-      ready(function() {
-        getQuote();
-        $( "#quote" ).removeClass("hide").addClass("animate uk-animation-slide-bottom-small");
-        $( "#by" ).removeClass("hide").addClass("animate uk-animation-slide-bottom-small");
-      });
-    </script>
+    <script src="js/quotes.js"></script>
   </body>
 </html>
