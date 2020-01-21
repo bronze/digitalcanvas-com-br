@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "ga-lite": "^2.0.5",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-lazy": "^0.0.4",
     "parcel-plugin-nuke-dist": "^1.0.1",
