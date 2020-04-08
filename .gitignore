@@ -144,3 +144,4 @@ tmp
 
 # Local Netlify folder
 .netlify
+yarn.lock
