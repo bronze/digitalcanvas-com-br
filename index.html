@@ -7,6 +7,22 @@
     <meta name="description" content="Playground de testes.">
     <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
     <script>!function(e){"use strict";function s(s){if(s){var t=e.documentElement;t.classList?t.classList.add("webp"):t.className+=" webp",window.sessionStorage.setItem("webpSupport",!0)}}!function(e){if(window.sessionStorage&&window.sessionStorage.getItem("webpSupport"))s(!0);else{var t=new Image;t.onload=t.onerror=function(){e(2===t.height)},t.src="data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA"}}(s)}(document);</script>
+    <script>
+      (function(src, cb) {
+        var s = document.createElement('script'); s.setAttribute('src', src);
+        s.onload = cb; (document.head || document.body).appendChild(s);
+      })('https://ucarecdn.com/libs/blinkloader/3.x/blinkloader.min.js', function() {
+        window.Blinkloader.optimize({
+          pubkey:'662f44d11fd2aa557e55',
+          fadeIn:true,
+          lazyload:true,
+          smartCompression:true,
+          responsive:true,
+          retina:true,
+          webp:true
+        });
+      })
+    </script>
     <!-- CSS FILES -->
     <link rel="stylesheet" type="text/css" href="css/uikit.min.css">
     <style>
@@ -14,45 +30,6 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
-      }
-      html body {
-        /*  background-image: url(https://digitalcanvas.imgix.net/img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?fit=crop&crop=entropy&auto=format,enhance&q=60&w=100vw);  */
-        background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-1200.webp);
-      }
-      html:not(.webp) body {
-        background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-1200.jpg);
-      }
-      @media only screen and  (min-width: 1600px) {
-        html.webp body {
-          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-2000.webp);
-        }
-        html:not(.webp) body {
-          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-2000.jpg);
-        }
-      }
-      @media only screen and (max-width: 1200px) {
-        html.webp body {
-          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-1200.webp);
-        }
-        html:not(.webp) body {
-          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-1200.jpg);
-        }
-      }
-      @media only screen and (max-width: 960px) {
-        html.webp body {
-          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-960.webp);
-        }
-        html:not(.webp) body {
-          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-960.jpg);
-        }
-      }
-      @media only screen and (max-width: 640px) {
-        html.webp body {
-          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-640.webp);
-        }
-        html:not(.webp) body {
-          background-image: url(img/ales-nesetril-Im7lZjxeLhg-unsplash-640.jpg);
-        }
       }
       q,
       #quote,
@@ -79,6 +56,14 @@
     <script src="js/ga.js"></script>
   </head>
   <body>
+    <img data-blink-src='https://www.digitalcanvas.com.br/img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg'/>
+    1
+    <img data-blink-src='img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg'/>
+    2
+    <!-- same goes for background images -->
+    <div data-blink-src='https://www.digitalcanvas.com.br/img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg'>
+      There is a banner behind this text.
+    </div>
     <div class="uk-light wrap uk-background-norepeat uk-background-cover uk-background-center-center uk-cover-container">
       <div class="uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-position-z-index uk-position-relative" style="background-color:rgba(0,0,0,0.5);">
         <!-- NAV -->
