@@ -31,6 +31,20 @@
         background-position: center center;
         background-size: cover;
       }
+      .image {
+        overflow: hidden;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+      }
+      img {
+        pointer-events: none;
+        position: absolute;
+        min-width: 100vw;
+        min-height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+      }
       q,
       #quote,
       blockquote {
@@ -56,42 +70,37 @@
     <script src="js/ga.js"></script>
   </head>
   <body>
-    <img data-blink-src='https://www.digitalcanvas.com.br/img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg'/>
-    1
-    <img data-blink-src='img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg'/>
-    2
-    <!-- same goes for background images -->
-    <div data-blink-src='https://www.digitalcanvas.com.br/img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg'>
-      There is a banner behind this text.
-    </div>
-    <div class="uk-light wrap uk-background-norepeat uk-background-cover uk-background-center-center uk-cover-container">
-      <div class="uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-position-z-index uk-position-relative" style="background-color:rgba(0,0,0,0.5);">
-        <!-- NAV -->
-        <div class="uk-position-top">
-          <div class="uk-container uk-container-small">
-            <nav class="uk-navbar-container uk-navbar-transparent" data-uk-navbar>
-              <div class="uk-navbar-left">
-                <div class="uk-navbar-item">
-                  <a class="uk-logo" href="">digitalcanvas</a>
+    <div class="image">
+      <img data-blink-uuid="a37c9ca8-41c6-40ad-8ac6-5b8ee506c9ff"/>
+      <div class="uk-light wrap uk-background-norepeat uk-background-cover uk-background-center-center uk-cover-container">
+        <div class="uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-position-z-index uk-position-relative" style="background-color:rgba(0,0,0,0.5);">
+          <!-- NAV -->
+          <div class="uk-position-top">
+            <div class="uk-container uk-container-small">
+              <nav class="uk-navbar-container uk-navbar-transparent" data-uk-navbar>
+                <div class="uk-navbar-left">
+                  <div class="uk-navbar-item">
+                    <a class="uk-logo" href="">digitalcanvas</a>
+                  </div>
                 </div>
-              </div>
-            </nav>
+              </nav>
+            </div>
           </div>
-        </div>
-        <!-- /NAV -->
-        <!-- TEXT -->
-        <div class="uk-container uk-container-small uk-flex-auto uk-text-center">
-          <h1 id="quote" class="uk-heading-primary hide" style="font-weight: 700;"></h1>
-          <div class="uk-width-4-5@m uk-margin-auto">
-            <p id="by" class="lead hide"></p>
+          <!-- /NAV -->
+          <!-- TEXT -->
+          <div class="uk-container uk-container-small uk-flex-auto uk-text-center">
+            <h1 id="quote" class="uk-heading-primary hide" style="font-weight: 700;"></h1>
+            <div class="uk-width-4-5@m uk-margin-auto">
+              <p id="by" class="lead hide"></p>
+            </div>
           </div>
+          <!-- /TEXT -->
+          <!-- FOOT -->
+          <div class="uk-position-bottom-right uk-position-small">
+            <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@alesnesetril?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Ales Nesetril"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Ales Nesetril</span></a>
+          </div>
+          <!-- /FOOT -->
         </div>
-        <!-- /TEXT -->
-        <!-- FOOT -->
-        <div class="uk-position-bottom-right uk-position-small">
-          <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@alesnesetril?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Ales Nesetril"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Ales Nesetril</span></a>
-        </div>
-        <!-- /FOOT -->
       </div>
     </div>
     <script src="js/vendor/jquery-3.4.1.min.js"></script>
