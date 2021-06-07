@@ -1,4 +1,3 @@
 # digitalcanvas-com-br
-digitalcanvas-com-br
 
-testing image cdn
+## Remember to change NODE_VERSION on netlify
