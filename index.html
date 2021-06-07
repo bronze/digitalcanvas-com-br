@@ -1,101 +1,28 @@
-<!doctype html>
-<html class="no-js" lang="pt">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8" />
     <title>digitalcanvas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Playground de testes.">
     <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
-    <link rel="preload" as="image" href="img/blur.jpg">
-    <script>!function(e){"use strict";function s(s){if(s){var t=e.documentElement;t.classList?t.classList.add("webp"):t.className+=" webp",window.sessionStorage.setItem("webpSupport",!0)}}!function(e){if(window.sessionStorage&&window.sessionStorage.getItem("webpSupport"))s(!0);else{var t=new Image;t.onload=t.onerror=function(){e(2===t.height)},t.src="data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA"}}(s)}(document);</script>
-    <script>
-      (function(src, cb) {
-        var s = document.createElement('script'); s.setAttribute('src', src);
-        s.onload = cb; (document.head || document.body).appendChild(s);
-      })('https://ucarecdn.com/libs/blinkloader/3.x/blinkloader.min.js', function() {
-        window.Blinkloader.optimize({
-          pubkey:'662f44d11fd2aa557e55',
-          fadeIn:false,
-          progressive: true,
-          lazyload:true,
-          smartCompression:true,
-          responsive:true,
-          retina:true,
-          webp:true
-        });
-      })
-    </script>
-    <!-- CSS FILES -->
-    <link rel="stylesheet" type="text/css" href="css/uikit.min.css">
-    <style>
-      body {
-/*         background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover; */
-        background-color: #000000;
-      }
-      img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-      }
-      q,
-      #quote,
-      blockquote {
-        quotes: "\201C" "\201D" "\2018" "\2019";
-      }
-      q:before,
-      #quote:before,
-      blockquote:before {
-        content: open-quote;
-        font-family:"Times New Roman";
-      }
-      q:after,
-      #quote:after,
-      blockquote:after {
-        content: close-quote;
-        font-family:"Times New Roman";
-      }
-      #by:before {
-        content: "― ";
-      }
-      .animate { animation-delay: 0.3s;}
-    </style>
   </head>
   <body>
     <img src="img/blur.jpg" data-blink-uuid="a37c9ca8-41c6-40ad-8ac6-5b8ee506c9ff"/>
-    <div class="uk-light wrap uk-background-norepeat uk-background-cover uk-background-center-center uk-cover-container">
-      <div class="uk-flex uk-flex-center uk-flex-middle uk-height-viewport uk-position-z-index uk-position-relative" style="background-color:rgba(0,0,0,0.5);">
-        <!-- NAV -->
-        <div class="uk-position-top">
-          <div class="uk-container uk-container-small">
-            <nav class="uk-navbar-container uk-navbar-transparent" data-uk-navbar>
-              <div class="uk-navbar-left">
-                <div class="uk-navbar-item">
-                  <a class="uk-logo" href="">digitalcanvas</a>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </div>
-        <!-- /NAV -->
-        <!-- TEXT -->
-        <div class="uk-container uk-container-small uk-flex-auto uk-text-center">
-          <h1 id="quote" class="uk-heading-primary hide" style="font-weight: 700;"></h1>
-          <div class="uk-width-4-5@m uk-margin-auto">
-            <p id="by" class="lead hide"></p>
-          </div>
-        </div>
-        <!-- /TEXT -->
-        <!-- FOOT -->
-        <div class="uk-position-bottom-right uk-position-small">
-          <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@alesnesetril?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Ales Nesetril"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Ales Nesetril</span></a>
-        </div>
-        <!-- /FOOT -->
-      </div>
+  <div class="text-white text-3xl">
+    <div class="dc">
+      <h1 class="" >digitalcanvas</h1>
     </div>
-    <script src="js/quotes.js"></script>
+    <div class="container mx-auto h-screen flex flex-col place-content-center place-items-center">
+      <blockquote class="flex font-bold text-4xl clear-right">
+        <q id="quote"></q>
+      </blockquote>
+      <p id="by" class="flex "></p>
+    </div>
+    <div class="absolute bottom-4 right-4">
+      <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@alesnesetril?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Ales Nesetril"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Ales Nesetril</span></a>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
   </body>
 </html>
