@@ -1,7 +1,7 @@
 body {
   background-color: #000000;
   font-size: 24px;
-  @apply font-sans;
+  @apply font-sans text-white;
 }
 img {
   display: block;
@@ -11,8 +11,11 @@ img {
   position: absolute;
   z-index: -1;
 }
-.dc {
-  @apply absolute top-8 left-8 text-gray-400;
+header {
+  @apply absolute top-8 left-8 text-gray-400 text-3xl;
+}
+section {
+  @apply container mx-auto h-screen flex flex-col place-content-center place-items-center p-6;
 }
 q,
 #quote,
@@ -33,7 +36,13 @@ q:after {
   position: relative;
   top: 3rem;
 }
+#by {
+  @apply pt-4;
+}
 #by:before {
   content: "― ";
 }
 .animate { animation-delay: 0.3s;}
+footer {
+  @apply absolute bottom-4 right-4;
+}
