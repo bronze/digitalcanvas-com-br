@@ -2,7 +2,6 @@ import 'virtual:windi.css'
 import './style.css'
 
 import './quotes'
-import './uploadcare'
 
 // import 3 different sizes of the image and create a srcset from them
 import srcsetAvif from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;700;900;1200;1600&avif&srcset'
