@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import { imagetools } from "vite-imagetools"
 import WindiCSS from 'vite-plugin-windicss'
 const typography = require('windicss/plugin/typography')
 
@@ -9,6 +10,6 @@ export default defineConfig({
   },
   safelist: ['prose', 'prose-sm', 'm-auto'],
   darkMode: 'class',
-  plugins: [typography, WindiCSS()],
+  plugins: [typography, WindiCSS(), imagetools()],
   theme: {}
 })
