@@ -21,7 +21,7 @@ import srcsetJpg from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;640;76
 import { src as placeholder, width, height } from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?width=300&blur=100&quality=30&metadata'
 
 // lets try rushing LCP
-document.body.style.background = `#000000 url(${placeholder}) no-repeat center center`
+document.body.style.background = `#000000 url(${placeholder}) no-repeat center center / cover`
 
 document.querySelector('#background').innerHTML = `
   <picture>
