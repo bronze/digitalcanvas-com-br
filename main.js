@@ -18,7 +18,7 @@ import srcsetAvif from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;640;7
 import srcsetWebp from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;640;768;1024;1200;1366;1600;1920&webp&srcset'
 import srcsetJpg from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;640;768;1024;1200;1366;1600;1920&jpg&srcset'
 // create a small placeholder and import its metadata
-import { src as placeholder, width, height } from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?width=300&blur=100&quality=30&metadata'
+import { src as placeholder, width, height } from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?width=600&blur=50&quality=50&metadata'
 
 // lets try rushing LCP
 document.body.style.background = `#000000 url(${placeholder}) no-repeat center center / cover`
