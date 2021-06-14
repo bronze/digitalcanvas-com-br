@@ -2,7 +2,6 @@ body {
   background-color: #000000;
   font-size: 24px;
   @apply font-sans text-white;
-  background: url("./img/blur.jpg") center center;
   background-size: cover;
 }
 img, picture, source {
