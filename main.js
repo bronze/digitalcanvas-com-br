@@ -3,11 +3,20 @@ import './style.css'
 
 import './quotes'
 
+// https://medium.com/hceverything/applying-srcset-choosing-the-right-sizes-for-responsive-images-at-different-breakpoints-a0433450a4a3
+// 1920px (this covers FullHD screens and up)
+// 1600px (this will cover 1600px desktops and several tablets in portrait mode, for example iPads at 768px width, which will request a 2x image of 1536px and above)
+// 1366px (it is the most widespread desktop resolution)
+// 1024px (1024x768 screens, excluding iPads which are hi-density anyway, are rarer, but I think you need some image size in between, not to leave too big a gap between pixel sizes, in case the market changes)
+// 768px (useful for 2x 375px mobile screens, as well as any device that actually requests something close to 768px)
+// 640px (for smartphones)
+
+
 // import 3 different sizes of the image and create a srcset from them
-import srcsetAvif from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;700;900;1200;1600&avif&srcset'
+import srcsetAvif from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;640;768;1024;1200;1366;1600;1920&avif&srcset'
 // do it a second time, but now as webp since safari can't display avif
-import srcsetWebp from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;700;900;1200;1600&webp&srcset'
-import srcsetJpg from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;700;900;1200;1600&jpg&srcset'
+import srcsetWebp from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;640;768;1024;1200;1366;1600;1920&webp&srcset'
+import srcsetJpg from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;640;768;1024;1200;1366;1600;1920&jpg&srcset'
 // create a small placeholder and import its metadata
 import { src as placeholder, width, height } from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?width=300&blur=100&quality=30&metadata'
 
