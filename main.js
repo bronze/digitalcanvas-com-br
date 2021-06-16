@@ -29,7 +29,8 @@ document.querySelector('#background').innerHTML = `
     <img
         src="${placeholder}"
         width="${width}"
-        height="${height}"/>
+        height="${height}"
+        alt="Laptop in the dark." />
   </picture>
 `
 
