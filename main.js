@@ -1,5 +1,6 @@
 import 'virtual:windi.css'
 import './quotes'
+import './user-interaction-load'
 
 // https://medium.com/hceverything/applying-srcset-choosing-the-right-sizes-for-responsive-images-at-different-breakpoints-a0433450a4a3
 // 1920px (this covers FullHD screens and up)
