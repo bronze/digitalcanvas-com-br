@@ -5,7 +5,7 @@
 
 [dev]
   command = "yarn run dev" # Command to start your dev server
-  port = 3000 # Port that the dev server will be listening on
+  port = 4000 # Port that the dev server will be listening on
   publish = "dist" # If you use a _redirect file, provide the path to your static content folder
   autoLaunch = true # a Boolean value that determines if Netlify Dev launches the local server address in your browser
 
