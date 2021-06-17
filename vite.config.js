@@ -23,8 +23,8 @@ export default defineConfig({
     typography,
     WindiCSS(),
     imagetools(),
-    minifyHtml(),
     viteSingleFile(),
+    minifyHtml(),
     // gizp
     viteCompression(),
     // br
