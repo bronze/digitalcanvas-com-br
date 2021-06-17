@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# MADE BY
+
+    Carlos Bronze
+
+# THANKS
+
+    You're welcome.
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, ViteJS
