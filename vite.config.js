@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import { imagetools } from "vite-imagetools"
 import WindiCSS from 'vite-plugin-windicss'
@@ -8,6 +9,11 @@ import { minifyHtml } from 'vite-plugin-html'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: [
+      { find: '/~/', replacement: `${resolve(__dirname, 'src')}/` },
+    ],
+  },
   extract: {
     include: ['./**/*.html'],
   },
