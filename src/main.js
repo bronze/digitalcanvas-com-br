@@ -1,5 +1,6 @@
 import 'virtual:windi.css'
 import 'virtual:windi-devtools'
+import './style.css'
 import './quotes'
 import './user-interaction-load'
 

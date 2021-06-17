@@ -12,6 +12,7 @@ img, picture, source {
   position: absolute;
   z-index: -1;
   animation: fadeIn 1s;
+  overflow: hidden;
 }
 @keyframes fadeIn {
   0% {opacity:0;}
