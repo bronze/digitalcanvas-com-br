@@ -4,7 +4,7 @@ import { imagetools } from "vite-imagetools"
 import WindiCSS from 'vite-plugin-windicss'
 const typography = require('windicss/plugin/typography')
 import viteCompression from 'vite-plugin-compression'
-import { viteSingleFile } from "vite-plugin-singlefile"
+import { viteSingleFile } from 'vite-plugin-singlefile'
 import { minifyHtml } from 'vite-plugin-html'
 
 // https://vitejs.dev/config/
