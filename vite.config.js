@@ -20,6 +20,12 @@ export default defineConfig({
     typography,
     WindiCSS(),
     imagetools(),
+    ViteRadar({
+      // Google Analytics tag injection
+      analytics: {
+        id: "UA-42538178-1",
+      },
+    }),
     //minifyHtml(),
     // gizp
     viteCompression(),
