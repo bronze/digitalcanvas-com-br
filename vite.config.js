@@ -4,7 +4,6 @@ import { imagetools } from "vite-imagetools";
 import WindiCSS from "vite-plugin-windicss";
 const typography = require("windicss/plugin/typography");
 import viteCompression from "vite-plugin-compression";
-import ViteRadar from "vite-plugin-radar";
 import { minifyHtml } from "vite-plugin-html";
 
 // https://vitejs.dev/config/
@@ -21,13 +20,7 @@ export default defineConfig({
     typography,
     WindiCSS(),
     imagetools(),
-    ViteRadar({
-      // Google Analytics tag injection
-      analytics: {
-        id: "UA-42538178-1",
-      },
-    }),
-    //minifyHtml(),
+    minifyHtml(),
     // gizp
     viteCompression(),
     // br
