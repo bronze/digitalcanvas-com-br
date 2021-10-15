@@ -1,10 +1,10 @@
-import 'virtual:windi.css'
-import 'virtual:windi-devtools'
+import "virtual:windi.css";
+import "virtual:windi-devtools";
 
-import './quotes'
-import './user-interaction-load'
+import "./quotes";
+import "./user-interaction-load";
 
-import './style.css'
+import "./style.css";
 
 // https://medium.com/hceverything/applying-srcset-choosing-the-right-sizes-for-responsive-images-at-different-breakpoints-a0433450a4a3
 // 1920px (this covers FullHD screens and up)
@@ -14,19 +14,22 @@ import './style.css'
 // 768px (useful for 2x 375px mobile screens, as well as any device that actually requests something close to 768px)
 // 640px (for smartphones)
 
-
 // import 3 different sizes of the image and create a srcset from them
-import srcsetAvif from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;640;768;1024;1200;1366;1600;1920&avif&srcset'
+import srcsetAvif from "./img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;640;768;1024;1200;1366;1600;1920&avif&srcset";
 // do it a second time, but now as webp since safari can't display avif
-import srcsetWebp from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;640;768;1024;1200;1366;1600;1920&webp&srcset'
-import srcsetJpg from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;640;768;1024;1200;1366;1600;1920&jpg&srcset'
+import srcsetWebp from "./img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;640;768;1024;1200;1366;1600;1920&webp&srcset";
+import srcsetJpg from "./img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?w=500;640;768;1024;1200;1366;1600;1920&jpg&srcset";
 // create a small placeholder and import its metadata
-import { src as placeholder, width, height } from './img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?width=600&blur=30&quality=50&metadata'
+import {
+  src as placeholder,
+  width,
+  height,
+} from "./img/ales-nesetril-Im7lZjxeLhg-unsplash.jpg?width=600&blur=30&quality=50&metadata";
 
 // lets try rushing LCP
-document.body.style.background = `#000000 url(${placeholder}) no-repeat center center / cover`
+document.body.style.background = `#000000 url(${placeholder}) no-repeat center center / cover`;
 
-document.querySelector('#background').innerHTML = `
+document.querySelector("#background").innerHTML = `
   <picture>
     <source scrset="${srcsetAvif}" type="image/avif"/>
     <source srcset="${srcsetWebp}" type="image/webp"/>
@@ -37,9 +40,7 @@ document.querySelector('#background').innerHTML = `
         height="${height}"
         alt="Laptop in the dark." />
   </picture>
-`
-
-
+`;
 
 // This might be fun
 // https://code.likeagirl.io/js-set-a-background-using-code-1cc26cf96ce4
@@ -60,3 +61,12 @@ document.querySelector('#background').innerHTML = `
 // } else {
 //   setBackground('pencils');
 // }
+
+window.ga =
+  window.ga ||
+  function () {
+    (ga.q = ga.q || []).push(arguments);
+  };
+ga.l = +new Date();
+ga("create", "UA-42538178-1", "auto");
+ga("send", "pageview");
