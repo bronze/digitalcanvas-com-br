@@ -3,6 +3,15 @@
   command = "yarn run build"
   publish = "dist"
 
+[[plugins]]
+package = "netlify-plugin-csp-generator"
+
+  [plugins.inputs]
+  buildDir = "dist"
+
+  [plugins.inputs.policies]
+    defaultSrc = "'self'"
+
 [dev]
   command = "yarn run dev" # Command to start your dev server
   port = 4000 # Port that the dev server will be listening on
