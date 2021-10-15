@@ -10,11 +10,11 @@ package = "netlify-plugin-csp-generator"
   buildDir = "dist"
 
   [plugins.inputs.policies]
-    defaultSrc = "'self' *.googletagmanager.com *.google-analytics.com"
-    connectSrc = "'self' google-analytics.com *.google-analytics.com"
+    defaultSrc = "'self' https: *.googletagmanager.com *.google-analytics.com"
+    connectSrc = "'self' https: google-analytics.com *.google-analytics.com"
     imgSrc = "'self' *.google-analytics.com data:"
-    styleSrc = "'self' googleapis.com *.googleapis.com cloudfront.net *.cloudfront.net"
-    scriptSrc = "'self'  'report-sample' *.google-analytics.com  *.googletagmanager.com  blob:"
+    styleSrc = "'self' https: googleapis.com *.googleapis.com cloudfront.net *.cloudfront.net"
+    scriptSrc = "'self'  'report-sample' https: *.google-analytics.com  *.googletagmanager.com  blob:"
     objectSrc = "'none'"
 
 [dev]
