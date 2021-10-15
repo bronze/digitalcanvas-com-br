@@ -14,7 +14,7 @@ package = "netlify-plugin-csp-generator"
     connectSrc = "'self' google-analytics.com *.google-analytics.com"
     imgSrc = "'self' *.google-analytics.com data:"
     styleSrc = "'self' googleapis.com *.googleapis.com cloudfront.net *.cloudfront.net"
-    scriptSrc = "'self'  'report-sample' *.google-analytics.com  *.googletagmanager.com"
+    scriptSrc = "'self'  'report-sample' *.google-analytics.com  *.googletagmanager.com  blob:"
     objectSrc = "'none'"
 
 [dev]
