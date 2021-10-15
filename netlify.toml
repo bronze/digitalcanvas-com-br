@@ -15,7 +15,6 @@ package = "netlify-plugin-csp-generator"
     scriptSrc = "'self' *.google-analytics.com  *.googletagmanager.com *.cloudfront.net"
     imgSrc = "'self' *.google-analytics.com data:"
     connectSrc = "*.google-analytics.com"
-    disableGeneratedPolicies = ["styleSrc"]
     objectSrc = "'none'"
 
 [dev]
