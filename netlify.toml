@@ -11,12 +11,12 @@ package = "netlify-plugin-csp-generator"
 
   [plugins.inputs.policies]
     defaultSrc = "'self' *.googletagmanager.com *.google-analytics.com *.cloudfront.net"
+    styleSrc = "'self' 'unsafe-hashes' googleapis.com *.googleapis.com cloudfront.net *.cloudfront.net"
     scriptSrc = "'self' *.google-analytics.com  *.googletagmanager.com *.cloudfront.net"
     imgSrc = "'self' *.google-analytics.com data:"
     connectSrc = "*.google-analytics.com"
-    styleSrc = "'self' 'unsafe-hashes' googleapis.com *.googleapis.com cloudfront.net *.cloudfront.net"
     disableGeneratedPolicies = ["styleSrc"]
-    objectSrc = "none"
+    objectSrc = "'none'"
 
 [dev]
   command = "yarn run dev" # Command to start your dev server
