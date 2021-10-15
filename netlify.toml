@@ -15,6 +15,7 @@ package = "netlify-plugin-csp-generator"
     imgSrc = "'self' https://www.google-analytics.com data:"
     connectSrc = "https://www.google-analytics.com"
     disableGeneratedPolicies = ["styleSrc"]
+    objectSrc = "none"
 
 [dev]
   command = "yarn run dev" # Command to start your dev server
