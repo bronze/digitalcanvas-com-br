@@ -2,7 +2,8 @@ import "virtual:windi.css";
 import "virtual:windi-devtools";
 
 import "./quotes";
-import "./user-interaction-load";
+// uses navigator.
+// import "./user-interaction-load"; 
 
 import "./style.css";
 
