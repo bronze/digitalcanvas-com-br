@@ -3,20 +3,6 @@
   command = "yarn run build"
   publish = "dist"
 
-[[plugins]]
-package = "netlify-plugin-csp-generator"
-
-  [plugins.inputs]
-  buildDir = "dist"
-
-  [plugins.inputs.policies]
-    defaultSrc = "'self' https: *.googletagmanager.com *.google-analytics.com"
-    connectSrc = "'self' https: google-analytics.com *.google-analytics.com"
-    imgSrc = "'self' *.google-analytics.com data:"
-    styleSrc = "'self' https: googleapis.com *.googleapis.com cloudfront.net *.cloudfront.net"
-    scriptSrc = "'self' 'report-sample' blob:"
-    objectSrc = "'none'"
-
 [dev]
   command = "yarn run dev" # Command to start your dev server
   port = 4000 # Port that the dev server will be listening on
