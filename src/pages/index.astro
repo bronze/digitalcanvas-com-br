@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro-eleventy-img";
+import { BackgroundImage } from "../components/BackgroundImage.astro";
 import { Icon } from 'astro-icon';
 let styleSheet = Astro.resolve('../styles/styles.scss');
 ---
@@ -23,7 +23,7 @@ let styleSheet = Astro.resolve('../styles/styles.scss');
 </head>
 <body>
   <div class="grid place-items-center h-screen">
-    <Image src="public/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" alt="" />
+    <BackgroundImage src="public/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" alt="" />
     <div>
       <header>
         <h1>digitalcanvas</h1>
