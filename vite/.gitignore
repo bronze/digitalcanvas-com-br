@@ -107,7 +107,6 @@ typings/
 # nuxt.js build output
 .nuxt
 
-
 # vuepress build output
 .vuepress/dist
 
@@ -142,11 +141,4 @@ tmp
 
 # Local Netlify folder
 .netlify
-public/assets/images/
-
-
-*.local
-.presite
-dist-ssr
-.vite-ssg-temp
-pnpm-lock.yaml
+yarn.lock

@@ -1,0 +1,51 @@
+---
+import { Image } from "astro-eleventy-img";
+import { Icon } from 'astro-icon';
+let styleSheet = Astro.resolve('../styles/styles.scss');
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>digitalcanvas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Playground de testes.">
+  <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="msapplication-TileColor" content="#a90000">
+  <meta name="theme-color" content="#a90000">
+  <link rel="stylesheet" href={styleSheet} >
+
+  <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+  <title>Carlos Bronze</title>
+</head>
+<body>
+  <div class="grid place-items-center h-screen">
+    <Image src="public/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" alt="" />
+    <div>
+      <header>
+        <h1>digitalcanvas</h1>
+      </header>
+      <section>
+        <blockquote>
+          <q id="quote">You can't go back and change the beggining, but you can start where you are and change the ending</q>
+        </blockquote>
+        <p id="by">C. S. Lewis</p>
+      </section>
+      <footer class="unsplash">
+        <a href="https://unsplash.com/@alesnesetril?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Ales Nesetril">
+          <span class="svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <title>unsplash-logo</title>
+              <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+            </svg>
+          </span>
+          <span class="credits">Ales Nesetril</span></a>
+      </footer>
+    </div>
+  </div>
+  <script src="/quotes.js" type="module"></script>
+</body>
+</html>
