@@ -1,6 +1,5 @@
 ---
-// import { Image } from "../components/Image.astro";
-import { Image } from "astro-eleventy-img";
+import Image from "astro-imagetools";
 import { Icon } from 'astro-icon';
 let styleSheet = Astro.resolve('../styles/styles.scss');
 
@@ -24,7 +23,7 @@ let styleSheet = Astro.resolve('../styles/styles.scss');
 </head>
 <body>
   <div class="grid place-items-center h-screen">
-    <Image src="public/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" alt="" />
+    <Image src="/src/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" formats="avif,webp,jpg" breakpoints={[300, 600, 900, 1200, 1500]} objectFit="cover" layout="fill" />
     <div>
       <header>
         <h1>digitalcanvas</h1>

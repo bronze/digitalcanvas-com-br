@@ -5,6 +5,7 @@
 // VSCode and other TypeScript-enabled text editors will provide auto-completion,
 // helpful tooltips, and warnings if your exported object is invalid.
 // You can disable this by removing "@ts-check" and `@type` comments below.
+import astroImagePlugin from "astro-imagetools/plugin";
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
@@ -19,6 +20,7 @@ export default /** @type {import('astro').AstroUserConfig} */ ({
     site: 'https://www.carlosbronze.com.br/',
   },
   vite: {
+    plugins: [astroImagePlugin],
     ssr: {
       external: ["svgo", "@11ty/eleventy-img"],
     },
