@@ -1,3 +1,5 @@
+// https://dev.to/stackfindover/how-to-build-a-javascript-random-quote-generator-2ao4
+// https://blog.stackfindover.com/how-to-build-a-javascript-random-quote-generator/
 //Use an array to hold the value of the quotes
 const arrayOfQuotes = [{
   "quoteText": "It's kind of fun to do the impossible",

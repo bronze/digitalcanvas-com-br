@@ -61,10 +61,10 @@ blockquote {
     // top: 0.5rem;
   }
 }
-#by {
-  @apply pt-4;
+#author {
+  @apply mt-4;
 }
-#by:before {
+#author:before {
   content: "― ";
 }
 .animate {
