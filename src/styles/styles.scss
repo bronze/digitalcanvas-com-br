@@ -54,13 +54,15 @@ blockquote {
     font-size: 2.5em;
     position: relative;
     top: 1.5rem;
+    line-height: 0.1em;
   }
   p:after {
     content: close-quote;
     font-family: "Times New Roman";
     font-size: 2.5em;
-    // position: relative;
-    // top: 0.5rem;
+    position: relative;
+    top: 0.5rem;
+    line-height: 0.1em;
   }
 }
 #author {
