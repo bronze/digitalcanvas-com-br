@@ -45,25 +45,21 @@ section {
 }
 blockquote {
   @apply flex font-bold text-4xl clear-right;
-}
-q,
-#quote,
-blockquote {
-  quotes: "\201C""\201D""\2018""\2019";
-}
-q:before {
-  content: open-quote;
-  font-family: "Times New Roman";
-  font-size: 2.5em;
-  position: relative;
-  top: 1.5rem;
-}
-q:after {
-  content: close-quote;
-  font-family: "Times New Roman";
-  font-size: 2.5em;
-  position: relative;
-  top: 3rem;
+  quotes: "\201C""\201E""\2018""\2019"; // https://www.w3schools.com/cssref/pr_gen_quotes.asp
+  p:before {
+    content: open-quote;
+    font-family: "Times New Roman";
+    font-size: 2.5em;
+    position: relative;
+    top: 1.5rem;
+  }
+  p:after {
+    content: close-quote;
+    font-family: "Times New Roman";
+    font-size: 2.5em;
+    // position: relative;
+    // top: 0.5rem;
+  }
 }
 #by {
   @apply pt-4;

@@ -1,0 +1,6 @@
+// https://stackoverflow.com/questions/61443484/how-to-solve-semi-colon-expected-warnings-css-semicolonexpected
+{
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
+}
