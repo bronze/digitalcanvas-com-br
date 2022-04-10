@@ -43,10 +43,10 @@ header {
 section {
   @apply mx-auto h-screen flex flex-col place-content-center place-items-center p-6;
   max-width: 80ch;
+  font-family: "Nunito", sans-serif;
 }
 blockquote {
   @apply flex font-bold text-4xl clear-right;
-  font-family: "Nunito", sans-serif;
   quotes: "\201C""\201E""\2018""\2019"; // https://www.w3schools.com/cssref/pr_gen_quotes.asp
   p:before {
     content: open-quote;
