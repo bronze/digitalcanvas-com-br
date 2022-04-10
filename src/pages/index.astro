@@ -16,22 +16,25 @@ import { Icon } from 'astro-icon';
   <link rel="icon" href="data:;base64,iVBORwOKGO=" />
   <title>digitalcanvas</title>
   <meta name="description" content="Playground de testes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <style lang='scss' is:global>
     @import "../styles/styles.scss";
   </style>
 </head>
 <body>
   <div class="grid place-items-center h-screen">
-    <Image src="/src/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" placeholder="none" fadeInTransition="false" formats="avif,webp,jpg" breakpoints={[300, 600, 900, 1200, 1500]} objectFit="cover" layout="fill" />
+    <Image src="/src/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" alt="" placeholder="none" fadeInTransition="false" formats="avif,webp,jpg" breakpoints={[300, 600, 900, 1200, 1500]} objectFit="cover" layout="fill" />
     <div>
       <header>
         <h1>digitalcanvas</h1>
       </header>
       <section>
         <blockquote>
-          <q id="quote">You can't go back and change the beggining, but you can start where you are and change the ending</q>
+          <p id="quote">You can't go back and change the beggining, but you can start where you are and change the ending</p>
         </blockquote>
-        <p id="by">C. S. Lewis</p>
+        <p id="author">C. S. Lewis</p>
       </section>
       <footer class="unsplash">
         <a href="https://unsplash.com/@alesnesetril?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Ales Nesetril">
@@ -45,6 +48,6 @@ import { Icon } from 'astro-icon';
       </footer>
     </div>
   </div>
-  <script src="/quotes.js" type="module"></script>
+  <script src="../scripts/quotes.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ source {
   object-fit: cover;
   position: absolute !important;
   z-index: -1;
-  animation: fadeIn 1s;
+  // animation: fadeIn 1s;
   overflow: hidden;
 }
 img {
@@ -38,37 +38,35 @@ img {
 }
 header {
   @apply absolute top-8 left-8 text-gray-400 text-3xl;
+  font-family: "Nunito", sans-serif;
 }
 section {
   @apply mx-auto h-screen flex flex-col place-content-center place-items-center p-6;
   max-width: 80ch;
+  font-family: "Nunito", sans-serif;
 }
 blockquote {
   @apply flex font-bold text-4xl clear-right;
+  quotes: "\201C""\201E""\2018""\2019"; // https://www.w3schools.com/cssref/pr_gen_quotes.asp
+  p:before {
+    content: open-quote;
+    font-family: "Times New Roman";
+    font-size: 2.5em;
+    position: relative;
+    top: 1.5rem;
+  }
+  p:after {
+    content: close-quote;
+    font-family: "Times New Roman";
+    font-size: 2.5em;
+    // position: relative;
+    // top: 0.5rem;
+  }
 }
-q,
-#quote,
-blockquote {
-  quotes: "\201C""\201D""\2018""\2019";
+#author {
+  @apply mt-4;
 }
-q:before {
-  content: open-quote;
-  font-family: "Times New Roman";
-  font-size: 2.5em;
-  position: relative;
-  top: 1.5rem;
-}
-q:after {
-  content: close-quote;
-  font-family: "Times New Roman";
-  font-size: 2.5em;
-  position: relative;
-  top: 3rem;
-}
-#by {
-  @apply pt-4;
-}
-#by:before {
+#author:before {
   content: "― ";
 }
 .animate {
