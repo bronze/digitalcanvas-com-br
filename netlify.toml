@@ -5,11 +5,18 @@
   publish = "dist"
   command = "npm run prod"
 
-
 [dev]
   publish = "dist"
   command = "npm run dev"
 
+# Redirects and headers are GLOBAL for all builds – they do not
+# get scoped to contexts no matter where you define them in the file.
+# For context-specific rules, use _headers or _redirects files,
+# which are PER-DEPLOY.
+
+# Netlify-cli redirects breaks astro pages in netlify dev
+# Unnecessary url escaping breaks request paths
+# https://github.com/netlify/cli/issues/2710
 # [[redirects]]
 #   from = "/*"
 #   to = "/index.html"
