@@ -5,10 +5,15 @@
   publish = "dist"
   command = "npm run prod"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+
+[dev]
+  publish = "dist"
+  command = "npm run dev"
+
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
 
 [[headers]]
   for = "/manifest.webmanifest"
