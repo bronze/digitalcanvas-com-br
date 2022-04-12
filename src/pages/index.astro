@@ -1,53 +1,74 @@
 ---
 import Image from "astro-imagetools";
-import { Icon } from 'astro-icon';
+import {Icon} from "astro-icon";
 ---
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="author" content="Carlos Bronze" />
-  <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-  <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-  <meta name="revisit-after" content="7 days" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="msapplication-TileColor" content="#a90000">
-  <meta name="theme-color" content="#a90000">
-  <link rel="icon" href="data:;base64,iVBORwOKGO=" />
-  <title>digitalcanvas</title>
-  <meta name="description" content="Playground de testes.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <style lang='scss' is:global>
-    @import "../styles/styles.scss";
-  </style>
-</head>
-<body>
-  <div class="grid place-items-center h-screen">
-    <Image src="/src/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" alt="" placeholder="none" fadeInTransition="false" formats="avif,webp,jpg" breakpoints={[300, 600, 900, 1200, 1500]} objectFit="cover" layout="fill" />
-    <div>
-      <header>
-        <h1>digitalcanvas</h1>
-      </header>
-      <section>
-        <blockquote>
-          <p id="quote">You can't go back and change the beggining, but you can start where you are and change the ending</p>
-        </blockquote>
-        <p id="author">C. S. Lewis</p>
-      </section>
-      <footer class="unsplash">
-        <a href="https://unsplash.com/@alesnesetril?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Ales Nesetril">
-          <span class="svg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-              <title>unsplash-logo</title>
-              <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
-            </svg>
-          </span>
-          <span class="credits">Ales Nesetril</span></a>
-      </footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Carlos Bronze" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#a90000" />
+    <meta name="theme-color" content="#a90000" />
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <title>digitalcanvas</title>
+    <meta name="description" content="Playground de testes." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style lang="scss" is:global>
+      @import "../styles/styles.scss";
+    </style>
+  </head>
+  <body>
+    <div class="grid place-items-center h-screen">
+      <Image
+        src="/src/ales-nesetril-Im7lZjxeLhg-unsplash.jpg"
+        alt=""
+        placeholder="none"
+        fadeInTransition="false"
+        formats="avif,webp,jpg"
+        breakpoints={[300, 600, 900, 1200, 1500]}
+        objectFit="cover"
+        layout="fill"
+      />
+      <div>
+        <header>
+          <h1>digitalcanvas</h1>
+        </header>
+        <section>
+          <blockquote>
+            <p id="quote">
+              You can't go back and change the beggining, but you can start
+              where you are and change the ending
+            </p>
+          </blockquote>
+          <p id="author">C. S. Lewis</p>
+        </section>
+        <footer class="unsplash">
+          <a
+            href="https://unsplash.com/@alesnesetril?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Download free do whatever you want high-resolution photos from Ales Nesetril">
+            <span class="svg">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <title>unsplash-logo</title>
+                <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+              </svg>
+            </span>
+            <span class="credits">Ales Nesetril</span>
+          </a>
+        </footer>
+      </div>
     </div>
-  </div>
-  <script src="../scripts/quotes.js"></script>
-</body>
+    <script src="../scripts/quotes.js"></script>
+  </body>
 </html>
