@@ -1,5 +1,5 @@
 ---
-import Image from "astro-imagetools";
+import {Picture} from "astro-imagetools/components";
 import {Icon} from "astro-icon";
 ---
 
@@ -26,12 +26,12 @@ import {Icon} from "astro-icon";
   </head>
   <body>
     <div class="grid place-items-center h-screen">
-      <Image
+      <Picture
         src="/src/ales-nesetril-Im7lZjxeLhg-unsplash.jpg"
         alt=""
         placeholder="none"
-        fadeInTransition="false"
-        formats="avif,webp,jpg"
+        fadeInTransition={false}
+        format={["avif", "webp", "jpg"]}
         breakpoints={[300, 600, 900, 1200, 1500]}
         objectFit="cover"
         layout="fill"

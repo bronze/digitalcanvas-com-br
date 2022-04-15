@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^0.1.0",
-    "@astrojs/tailwind": "^0.1.2",
-    "astro-imagetools": "^0.4.1"
+    "@astrojs/tailwind": "^0.2.0",
+    "astro-imagetools": "^0.5.3"
   }
 }
