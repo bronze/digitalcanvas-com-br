@@ -1,19 +1,25 @@
 {
   "name": "digitalcanvas-com-br",
-  "version": "22.0.0",
+  "version": "22.4.0",
   "private": true,
+  "description": "",
+  "main": "index.js",
   "format": "yarn prettier -w .",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "preview": "astro preview",
+    "dev@legacy": "astro dev --legacy-build",
+    "start@legacy": "astro dev --legacy-build",
+    "build@legacy": "astro build --legacy-build",
     "critical": "node critical.js",
     "redirects": "node redirects-prod.js",
-    "prod": "astro build && npm run critical",
-    "preview": "astro preview"
+    "prod": "astro build && npm run critical"
   },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "astro": "^0.26.1",
     "astro-icon": "^0.7.1",
     "autoprefixer": "^10.4.4",
     "critical": "^4.0.1",
@@ -25,6 +31,7 @@
   "dependencies": {
     "@astrojs/sitemap": "^0.1.0",
     "@astrojs/tailwind": "^0.2.0",
+    "astro": "^1.0.0-beta.12",
     "astro-imagetools": "^0.5.4"
   }
 }
