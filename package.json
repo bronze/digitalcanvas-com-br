@@ -9,7 +9,7 @@
     "build": "astro build",
     "critical": "node critical.js",
     "redirects": "node redirects-prod.js",
-    "prod": "astro build && npm run critical && npm run redirects",
+    "prod": "astro build && npm run critical",
     "preview": "astro preview"
   },
   "devDependencies": {

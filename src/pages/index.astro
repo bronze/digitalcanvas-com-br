@@ -28,13 +28,15 @@ import {Icon} from "astro-icon";
     <div class="grid place-items-center h-screen">
       <Picture
         src="/src/ales-nesetril-Im7lZjxeLhg-unsplash.jpg"
-        alt=""
+        alt=" "
         width="1200"
         height="850"
         placeholder="none"
         fadeInTransition={false}
         format={["avif", "webp", "png"]}
         breakpoints={[300, 600, 900, 1200, 1500]}
+        fallbackFormat="png"
+        includeSourceFormat={false}
         objectFit="cover"
         layout="fill"
       />
