@@ -26,11 +26,11 @@
     "postcss-preset-env": "^7.4.3",
     "prettier-plugin-astro": "^0.0.12",
     "sass": "^1.50.1",
-    "tailwindcss": "^3.0.24"
+    "vite-plugin-windicss": "^1.8.4",
+    "windicss": "^3.5.1"
   },
   "dependencies": {
     "@astrojs/sitemap": "^0.1.0",
-    "@astrojs/tailwind": "^0.2.0",
     "astro": "^1.0.0-beta.12",
     "astro-imagetools": "^0.5.4"
   }

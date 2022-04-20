@@ -12,6 +12,9 @@ body {
   @apply font-sans text-white;
   background-size: cover;
 }
+// div {
+//   grid place-items-center h-screen
+// }
 img,
 figure,
 picture,
@@ -82,9 +85,7 @@ footer {
       color: white;
       text-decoration: none;
       padding: 4px 6px;
-      font-family: -apple-system, BlinkMacSystemFont, "San Francisco",
-        "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial,
-        sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
       font-size: 12px;
       font-weight: bold;
       line-height: 1.2;

@@ -1,20 +1,16 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import astroImagePlugin from "astro-imagetools/plugin";
+import WindiCSS from 'vite-plugin-windicss'
 
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [astroImagePlugin],
+    plugins: [astroImagePlugin, WindiCSS()],
     ssr: {
       external: ["svgo"],
     },
   },
-  integrations: [tailwind({
-    config: {
-      applyBaseStyles: false,
-    },
-  }), sitemap()],
+  integrations: [sitemap()],
   site: 'https://www.digitalcanvas.com.br/',
 });
