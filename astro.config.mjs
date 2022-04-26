@@ -6,7 +6,9 @@ import WindiCSS from 'vite-plugin-windicss'
 // https://astro.build/config
 export default defineConfig({
   vite: {
-    plugins: [astroImagePlugin, WindiCSS()],
+    plugins: [astroImagePlugin, WindiCSS({
+      preflight: true
+    })],
     ssr: {
       external: ["svgo"],
     },

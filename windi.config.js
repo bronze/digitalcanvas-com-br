@@ -2,6 +2,7 @@ import { defineConfig } from 'windicss/helpers';
 
 export default defineConfig({
   darkMode: false, // or 'media' or 'class'
+  preflight: true,
   corePlugins: {
     container: false,
   },

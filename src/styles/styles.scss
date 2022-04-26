@@ -1,4 +1,3 @@
-@forward "tailwind";
 @forward "nord";
 
 /* src/styles/global.css */
@@ -12,6 +11,8 @@ body {
   @apply font-sans text-white;
   background-size: cover;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 // div {
 //   grid place-items-center h-screen
