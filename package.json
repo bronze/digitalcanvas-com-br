@@ -6,9 +6,9 @@
   "main": "index.js",
   "format": "yarn prettier -w .",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
+    "dev": "astro dev --experimental-integrations",
+    "start": "astro dev --experimental-integrations",
+    "build": "astro build --experimental-integrations",
     "preview": "astro preview",
     "dev@legacy": "astro dev --legacy-build",
     "start@legacy": "astro dev --legacy-build",
@@ -32,6 +32,6 @@
   "dependencies": {
     "@astrojs/sitemap": "^0.1.0",
     "astro": "^1.0.0-beta.12",
-    "astro-imagetools": "^0.5.4"
+    "astro-imagetools": "^0.6.2"
   }
 }
