@@ -21,9 +21,9 @@
   "license": "ISC",
   "devDependencies": {
     "astro-icon": "^0.7.1",
-    "autoprefixer": "^10.4.6",
+    "autoprefixer": "^10.4.7",
     "critical": "^4.0.1",
-    "postcss-preset-env": "^7.4.4",
+    "postcss-preset-env": "^7.5.0",
     "prettier-plugin-astro": "^0.0.12",
     "sass": "^1.51.0",
     "vite-plugin-windicss": "^1.8.4",
