@@ -15,7 +15,7 @@
     "build@legacy": "astro build --legacy-build",
     "critical": "node critical.js",
     "redirects": "node redirects-prod.js",
-    "prod": "astro build && npm run critical"
+    "prod": "astro build --experimental-integrations && npm run critical"
   },
   "author": "",
   "license": "ISC",
