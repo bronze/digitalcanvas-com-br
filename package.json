@@ -20,18 +20,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "astro-icon": "^0.7.1",
+    "astro-icon": "^0.7.3",
     "autoprefixer": "^10.4.7",
     "critical": "^4.0.1",
-    "postcss-preset-env": "^7.6.0",
-    "prettier-plugin-astro": "^0.0.12",
-    "sass": "^1.52.1",
-    "vite-plugin-windicss": "^1.8.4",
-    "windicss": "^3.5.4"
+    "postcss-preset-env": "^7.7.2",
+    "prettier-plugin-astro": "^0.1.1",
+    "sass": "^1.53.0",
+    "vite-plugin-windicss": "^1.8.7",
+    "windicss": "^3.5.6"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^0.1.0",
+    "@astrojs/sitemap": "^0.2.6",
     "astro": "^1.0.0-beta.12",
-    "astro-imagetools": "^0.6.2"
+    "astro-imagetools": "^0.6.10"
   }
 }
