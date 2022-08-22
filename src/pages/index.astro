@@ -7,7 +7,6 @@ import {Picture} from "astro-imagetools/components";
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Carlos Bronze" />
-    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="revisit-after" content="7 days" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,12 +24,16 @@ import {Picture} from "astro-imagetools/components";
     <style lang="scss" is:global>
       @import "../styles/styles.scss";
     </style>
+    <script defer data-domain="digitalcanvas.com.br" src="https://plausible.io/js/plausible.js">
+
+    </script>
   </head>
+
   <body>
     <div>
       <Picture
         src="/src/ales-nesetril-Im7lZjxeLhg-unsplash.jpg"
-        alt=" "
+        alt="Laptop"
         width="1200"
         height="850"
         placeholder="none"
@@ -41,6 +44,11 @@ import {Picture} from "astro-imagetools/components";
         includeSourceFormat={false}
         objectFit="cover"
         layout="fill"
+        loading="eager"
+        sizes={(breakpoints) => {
+          const maxWidth = breakpoints[breakpoints.length - 1]
+          return `(min-width: ${maxWidth}px) ${maxWidth}px, 100vw`
+        }}
       />
       <div>
         <header>
@@ -54,7 +62,7 @@ import {Picture} from "astro-imagetools/components";
         </section>
         <footer class="unsplash">
           <a
-            href="https://unsplash.com/@alesnesetril?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+            href="https://unsplash.com/@alesnesetril?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
             target="_blank"
             rel="noopener noreferrer"
             title="Download free do whatever you want high-resolution photos from Ales Nesetril">
@@ -69,6 +77,8 @@ import {Picture} from "astro-imagetools/components";
         </footer>
       </div>
     </div>
-    <script src="../scripts/quotes.js"></script>
+    <script src="../scripts/quotes.js">
+
+    </script>
   </body>
 </html>
