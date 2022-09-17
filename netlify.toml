@@ -3,51 +3,13 @@
 
 [build]
   publish = "dist"
-  command = "npm run prod"
+  command = "pnpm build || ( npm install pnpm && pnpm build )"
 
 [dev]
-  publish = "dist"
-  command = "npm run dev"
+  autoLaunch = false
+  command = "pnpm run dev"
 
-# Redirects and headers are GLOBAL for all builds – they do not
-# get scoped to contexts no matter where you define them in the file.
-# For context-specific rules, use _headers or _redirects files,
-# which are PER-DEPLOY.
-
-# Netlify-cli redirects breaks astro pages in netlify dev
-# Unnecessary url escaping breaks request paths
-# https://github.com/netlify/cli/issues/2710
-# [[redirects]]
-#   from = "/*"
-#   to = "/index.html"
-#   status = 200
-
-[[headers]]
-  for = "/manifest.webmanifest"
-  [headers.values]
-    Content-Type = "application/manifest+json"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
-    X-XSS-Protection = "1; mode=block"
-    # X-Content-Type-Options = "nosniff"
-    # https://report-uri.com/home/generate
-    Content-Security-Policy = ""
-    #Content-Security-Policy = "default-src 'self' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com *.cloudfront.net; prefetch-src 'self'; connect-src 'self' google-analytics.com *.google-analytics.com; img-src 'self' 'unsafe-inline' *.google-analytics.com; media-src 'self' *.youtube.com; style-src 'self' 'unsafe-inline' googleapis.com *.googleapis.com cloudfront.net *.cloudfront.net; script-src 'self' 'unsafe-inline' *.google-analytics.com  *.googletagmanager.com *.cloudfront.net; frame-src 'self' https://www.youtube.com/ https://vimeo.com; form-action 'self' https:; object-src 'none'; require-trusted-types-for 'script';"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Accept-CH = "Downlink,RTT,Device-Memory,Save-Data,DPR,Width"
-    # Permissions-Policy = "vibrate 'none'; geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'none'; payment 'none'"
-    Permissions-Policy = "autoplay=(), camera=(), geolocation=(), microphone=(), midi=(), usb=()"
-
-# https://codewithhugo.com/enable-cdn-netlify/
-[[headers]]
-  for = "*.css"
-  [headers.values]
-    Cache-Control = "max-age=604800, must-revalidate, public"
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Cache-Control = "max-age=604800, must-revalidate, public"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

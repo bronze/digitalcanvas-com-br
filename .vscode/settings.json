@@ -3,6 +3,14 @@
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
+  "html.format.wrapAttributes": "force",
+  "html.format.wrapLineLength": 40,
+  // Wrap attributes.
+  //  - auto: Wrap attributes only when line length is exceeded.
+  //  - force: Wrap each attribute except first.
+  //  - force-aligned: Wrap each attribute except first and keep aligned.
+  //  - force-expand-multiline: Wrap each attribute.
+  //  - aligned-multiple: Wrap when line length is exceeded, align attributes vertically.
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
     "package.json": ".detoxrc, package-lock.json, pnpm-lock.yaml, .npmrc, yarn.lock, .yarnrc, .editorconfig, .prettier*, .gitignore, .eslintrc.json, jest.*.js, nx.json, tsconfig.*.json, empty.ts, .env",

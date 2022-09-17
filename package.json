@@ -28,6 +28,7 @@
     "@astrojs/sitemap": "^1.0.0",
     "astro-compress": "^1.0.8",
     "astro-critters": "^1.0.4",
+    "astro-google-fonts-optimizer": "^0.2.1",
     "astro-icon": "^0.7.3"
   }
 }
