@@ -1,5 +1,5 @@
 ---
-import {Picture} from "astro-imagetools/components";
+import {Picture} from "@astrojs/image/components";
 ---
 
 <!DOCTYPE html>
@@ -32,23 +32,15 @@ import {Picture} from "astro-imagetools/components";
   <body>
     <div>
       <Picture
-        src="/src/ales-nesetril-Im7lZjxeLhg-unsplash.jpg"
+        src={import("src/ales-nesetril-Im7lZjxeLhg-unsplash.jpg")}
         alt="Laptop"
         width="1200"
         height="850"
-        placeholder="none"
-        fadeInTransition={false}
+        aspectRatio="1200:850"
         format={["avif", "webp", "png"]}
-        breakpoints={[300, 600, 900, 1200, 1500]}
-        fallbackFormat="png"
-        includeSourceFormat={false}
-        objectFit="cover"
-        layout="fill"
+        widths={[300, 600, 900, 1200, 1500]}
         loading="eager"
-        sizes={(breakpoints) => {
-          const maxWidth = breakpoints[breakpoints.length - 1]
-          return `(min-width: ${maxWidth}px) ${maxWidth}px, 100vw`
-        }}
+        sizes="100vw"
       />
       <div>
         <header>

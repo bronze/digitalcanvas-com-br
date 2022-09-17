@@ -1,37 +1,33 @@
 {
   "name": "digitalcanvas-com-br",
-  "version": "22.4.0",
+  "version": "22.9.0",
   "private": true,
   "description": "",
-  "main": "index.js",
-  "format": "yarn prettier -w .",
+  "format": "pnpm prettier -w .",
   "scripts": {
-    "dev": "astro dev --experimental-integrations",
-    "start": "astro dev --experimental-integrations",
-    "build": "astro build --experimental-integrations",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
     "preview": "astro preview",
-    "dev@legacy": "astro dev --legacy-build",
-    "start@legacy": "astro dev --legacy-build",
-    "build@legacy": "astro build --legacy-build",
-    "critical": "node critical.js",
-    "redirects": "node redirects-prod.js",
-    "prod": "astro build --experimental-integrations && npm run critical"
+    "astro": "astro"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "astro-icon": "^0.7.3",
-    "autoprefixer": "^10.4.7",
+    "@unocss/transformer-directives": "^0.45.21",
+    "astro": "^1.2.6",
+    "autoprefixer": "^10.4.11",
     "critical": "^4.0.1",
-    "postcss-preset-env": "^7.7.2",
-    "prettier-plugin-astro": "^0.1.1",
-    "sass": "^1.53.0",
-    "vite-plugin-windicss": "^1.8.7",
-    "windicss": "^3.5.6"
+    "postcss-preset-env": "^7.8.2",
+    "prettier-plugin-astro": "^0.5.4",
+    "sass": "^1.54.9",
+    "unocss": "^0.45.21"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^0.2.6",
-    "astro": "^1.0.0-beta.12",
-    "astro-imagetools": "^0.6.10"
+    "@astrojs/image": "^0.7.0",
+    "@astrojs/sitemap": "^1.0.0",
+    "astro-compress": "^1.0.8",
+    "astro-critters": "^1.0.4",
+    "astro-icon": "^0.7.3"
   }
 }
