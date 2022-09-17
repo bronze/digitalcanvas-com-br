@@ -5,36 +5,35 @@ import '../styles/styles.scss'
 ---
 
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='author' content='Carlos Bronze' />
-    <meta http-equiv='X-UA-Compatible' content='chrome=1' />
-    <meta name='revisit-after' content='7 days' />
-    <meta name='viewport' content='width=device-width, initial-scale=1' />
-    <meta name='msapplication-TileColor' content='#000000' />
-    <meta name='theme-color' content='#000000' />
+    <meta charset="UTF-8" />
+    <meta name="author" content="Carlos Bronze" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#000000" />
     <title>digitalcanvas</title>
-    <meta name='description' content='Playground de testes.' />
+    <meta name="description" content="Playground de testes." />
     <GoogleFontsOptimizer
-      url='https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap'
+      url="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
     />
-    <script defer data-domain='digitalcanvas.com.br' src='https://plausible.io/js/plausible.js'>
-
-    </script>
+    <script defer data-domain="digitalcanvas.com.br" src="https://plausible.io/js/plausible.js"
+    ></script>
   </head>
   <body>
     <div>
       <Picture
         src={import('src/ales-nesetril-Im7lZjxeLhg-unsplash.jpg')}
-        alt='Laptop'
-        width='1200'
-        height='850'
-        aspectRatio='1200:850'
+        alt="Laptop"
+        width="1200"
+        height="850"
+        aspectRatio="1200:850"
         format={['avif', 'webp', 'png']}
         widths={[300, 600, 900, 1200, 1500]}
-        loading='eager'
-        sizes='100vw'
+        loading="eager"
+        sizes="100vw"
       />
       <div>
         <header>
@@ -42,32 +41,30 @@ import '../styles/styles.scss'
         </header>
         <section>
           <blockquote>
-            <p id='quote'>
+            <p id="quote">
               You can't go back and change the beggining, but you can start where you are and change
               the ending
             </p>
           </blockquote>
-          <p id='author'>C. S. Lewis</p>
+          <p id="author">C. S. Lewis</p>
         </section>
-        <footer class='unsplash'>
+        <footer class="unsplash">
           <a
-            href='https://unsplash.com/@alesnesetril?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge'
-            target='_blank'
-            rel='noopener noreferrer'
-            title='Download free do whatever you want high-resolution photos from Ales Nesetril'>
-            <span class='svg'>
-              <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'>
+            href="https://unsplash.com/@alesnesetril?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Download free do whatever you want high-resolution photos from Ales Nesetril">
+            <span class="svg">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                 <title>unsplash-logo</title>
-                <path d='M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z'></path>
+                <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
               </svg>
             </span>
-            <span class='credits'>Ales Nesetril</span>
+            <span class="credits">Ales Nesetril</span>
           </a>
         </footer>
       </div>
     </div>
-    <script src='../scripts/quotes.js'>
-
-    </script>
+    <script src="../scripts/quotes.js"></script>
   </body>
 </html>

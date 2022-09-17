@@ -3,6 +3,9 @@
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
+  // "emmet.preferences": {
+  //   "format.noIndentTags": ["html", "script"]
+  // },
   "html.format.wrapAttributes": "force",
   "html.format.wrapLineLength": 40,
   // Wrap attributes.
