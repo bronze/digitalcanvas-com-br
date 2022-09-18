@@ -14,6 +14,12 @@
   //  - force-aligned: Wrap each attribute except first and keep aligned.
   //  - force-expand-multiline: Wrap each attribute.
   //  - aligned-multiple: Wrap when line length is exceeded, align attributes vertically.
+  "editor.wordWrap": "on",
+  // "editor.wordWrapColumn": 160
+  // editor.wordWrap: "off" - Lines will never wrap.
+  // editor.wordWrap: "on" - Lines will wrap at viewport width.
+  // editor.wordWrap: "wordWrapColumn" - Lines will wrap at the value of editor.wordWrapColumn.
+  // editor.wordWrap: "bounded" - Lines will wrap at the minimum of viewport width and the value of editor.wordWrapColumn.
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
     "package.json": ".detoxrc, package-lock.json, pnpm-lock.yaml, .npmrc, yarn.lock, .yarnrc, .editorconfig, .prettier*, .gitignore, .eslintrc.json, jest.*.js, nx.json, tsconfig.*.json, empty.ts, .env",
