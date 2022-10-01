@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import {defineConfig} from 'astro/config';
 import UnoCSS from 'unocss/astro';
 import compress from "astro-compress";
 import critters from "astro-critters";
@@ -13,6 +13,9 @@ export default defineConfig({
       external: ["svgo"]
     }
   },
-  integrations: [sitemap(), image(), UnoCSS(), compress(), critters()],
+  integrations: [sitemap(), image({
+    // may be useful if your hosting provider allows caching between CI builds
+    cacheDir: "./.cache/image"
+  }), UnoCSS(), compress(), critters()],
   site: 'https://www.digitalcanvas.com.br/'
 });

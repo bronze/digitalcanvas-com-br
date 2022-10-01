@@ -99,7 +99,7 @@ typings/
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
-.cache
+# .cache
 
 # next.js build output
 .next
@@ -151,11 +151,11 @@ pnpm-lock.yaml
 # https://stackoverflow.com/questions/3203228/git-ignore-exception
 # Ignore everything
 /dist/*
-!/dist/assets/
-/dist/assets/*
+# !/dist/assets/
+# /dist/assets/*
 # But not these files...
-!dist/*/*.webp
-!dist/*/*.avif
-!dist/*/*.png
-!dist/*/*.jpeg
-!dist/*/*.jpg
+# !dist/*/*.webp
+# !dist/*/*.avif
+# !dist/*/*.png
+# !dist/*/*.jpeg
+# !dist/*/*.jpg
