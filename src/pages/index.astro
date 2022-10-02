@@ -1,5 +1,5 @@
 ---
-import {Picture} from '@astrojs/image/components'
+import Picture from '../components/Picture.astro'
 import {GoogleFontsOptimizer} from 'astro-google-fonts-optimizer'
 import '../styles/styles.scss'
 ---
@@ -17,6 +17,7 @@ import '../styles/styles.scss'
     <title>digitalcanvas</title>
     <meta name="description" content="Playground de testes." />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-icon.png" />
     <GoogleFontsOptimizer
       url="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
     />
@@ -30,6 +31,7 @@ import '../styles/styles.scss'
         alt="Laptop"
         width="1200"
         height="850"
+        onerror="/android-icon-96x96.png"
         aspectRatio="1200:850"
         format={['avif', 'webp', 'png']}
         widths={[300, 600, 900, 1200, 1500]}
