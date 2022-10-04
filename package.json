@@ -15,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "@unocss/transformer-directives": "^0.45.26",
-    "astro": "^1.4.2",
+    "astro": "^1.4.4",
     "autoprefixer": "^10.4.12",
     "postcss-preset-env": "^7.8.2",
     "prettier-plugin-astro": "^0.5.5",
@@ -25,7 +25,7 @@
   "dependencies": {
     "@astrojs/image": "^0.9.1",
     "@astrojs/sitemap": "^1.0.0",
-    "astro-compress": "^1.0.9",
+    "astro-compress": "^1.0.10",
     "astro-critters": "^1.0.5",
     "astro-google-fonts-optimizer": "^0.2.2",
     "astro-icon": "^0.7.3"
