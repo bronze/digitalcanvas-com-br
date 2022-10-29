@@ -4,6 +4,7 @@
 [build]
   publish = "dist"
   command = "pnpm build || ( npm install pnpm && pnpm build )"
+  functions = "functions/"
 
 [dev]
   autoLaunch = false
