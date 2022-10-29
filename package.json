@@ -25,9 +25,12 @@
   "dependencies": {
     "@astrojs/image": "^0.9.1",
     "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/svelte": "^1.0.2",
+    "@fontsource/nunito": "^4.5.11",
     "astro-compress": "^1.0.10",
     "astro-critters": "^1.0.5",
     "astro-google-fonts-optimizer": "^0.2.2",
-    "astro-icon": "^0.7.3"
+    "astro-icon": "^0.7.3",
+    "svelte": "^3.46.4"
   }
 }

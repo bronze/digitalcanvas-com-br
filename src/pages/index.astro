@@ -2,6 +2,9 @@
 import Picture from '../components/Picture.astro'
 import {GoogleFontsOptimizer} from 'astro-google-fonts-optimizer'
 import '../styles/styles.scss'
+import AppSvelte from '../components/AppQuotes.svelte'
+
+//https://dev.to/ringmaster/build-a-random-quote-machine-with-svelte-and-parcel-4l4c
 ---
 
 <!DOCTYPE html>
@@ -18,9 +21,6 @@ import '../styles/styles.scss'
     <meta name="description" content="Playground de testes." />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/apple-icon.png" />
-    <GoogleFontsOptimizer
-      url="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
-    />
     <script defer data-domain="digitalcanvas.com.br" src="https://plausible.io/js/plausible.js"
     ></script>
   </head>
@@ -42,7 +42,8 @@ import '../styles/styles.scss'
         <header>
           <h1>digitalcanvas</h1>
         </header>
-        <section>
+        <AppSvelte client:load />
+        <!-- <section>
           <blockquote>
             <p id="quote">
               You can't go back and change the beggining, but you can start where you are and change
@@ -50,7 +51,7 @@ import '../styles/styles.scss'
             </p>
           </blockquote>
           <p id="author">C. S. Lewis</p>
-        </section>
+        </section> -->
         <footer class="unsplash">
           <a
             href="https://unsplash.com/@alesnesetril?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
@@ -68,6 +69,6 @@ import '../styles/styles.scss'
         </footer>
       </div>
     </div>
-    <script src="../scripts/quotes.js"></script>
+    <!-- <script src="../scripts/quotes.js"></script> -->
   </body>
 </html>

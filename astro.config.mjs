@@ -1,10 +1,11 @@
-import {defineConfig} from 'astro/config';
+import { defineConfig } from 'astro/config';
 import UnoCSS from 'unocss/astro';
 import compress from "astro-compress";
 import critters from "astro-critters";
 import image from "@astrojs/image";
 import sitemap from '@astrojs/sitemap';
 
+import svelte from "@astrojs/svelte";
 
 // https://astro.build/config
 export default defineConfig({
@@ -56,11 +57,11 @@ export default defineConfig({
       sortAttributes: true,
       sortClassName: true,
       trimCustomFragments: false,
-      useShortDoctype: false,
+      useShortDoctype: false
     },
     js: false,
     img: false,
-    svg: false,
-  })],
+    svg: false
+  }), svelte()],
   site: 'https://www.digitalcanvas.com.br/'
 });

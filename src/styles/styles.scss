@@ -1,5 +1,6 @@
-@forward "nord";
-
+@forward 'nord';
+@import '@fontsource/nunito/400.css';
+@import '@fontsource/nunito/700.css';
 /* src/styles/global.css */
 
 body * {
@@ -8,6 +9,7 @@ body * {
 body {
   background-color: #000000;
   font-size: 24px;
+  font-family: 'Nunito', sans-serif;
   @apply font-sans text-white;
   background-size: cover;
   overflow: hidden;
@@ -43,19 +45,19 @@ img {
 }
 header {
   @apply absolute top-8 left-8 text-gray-400 text-3xl;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 section {
   @apply mx-auto h-screen flex flex-col place-content-center place-items-center p-6;
   max-width: 80ch;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 blockquote {
   @apply flex font-bold text-4xl clear-right;
-  quotes: "\201C""\201E""\2018""\2019"; // https://www.w3schools.com/cssref/pr_gen_quotes.asp
+  quotes: '\201C''\201E''\2018''\2019'; // https://www.w3schools.com/cssref/pr_gen_quotes.asp
   p:before {
     content: open-quote;
-    font-family: "Times New Roman";
+    font-family: 'Times New Roman';
     font-size: 2.5em;
     position: relative;
     top: 1.5rem;
@@ -63,7 +65,7 @@ blockquote {
   }
   p:after {
     content: close-quote;
-    font-family: "Times New Roman";
+    font-family: 'Times New Roman';
     font-size: 2.5em;
     position: relative;
     top: 0.5rem;
@@ -74,7 +76,7 @@ blockquote {
   @apply mt-4;
 }
 #author:before {
-  content: "― ";
+  content: '― ';
 }
 .animate {
   animation-delay: 0.3s;
@@ -87,7 +89,8 @@ footer {
       color: white;
       text-decoration: none;
       padding: 4px 6px;
-      font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica,
+        Ubuntu, Roboto, Noto, 'Segoe UI', Arial, sans-serif;
       font-size: 12px;
       font-weight: bold;
       line-height: 1.2;
