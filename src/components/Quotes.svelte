@@ -1,6 +1,8 @@
 <script>
 import Quote from "./Quote.svelte"
 let gettingQuotes = getQuotes()
+import { fade } from 'svelte/transition';
+let visible = false;
 
 async function getQuotes() {
   const response = await fetch("./quotes.json")
@@ -23,6 +25,7 @@ async function getQuotes() {
     </p>
   </blockquote>
   <p id="author">Lewis Carroll</p>
+
   {:then quotes}
   <Quote {quotes}/>
   {:catch error}

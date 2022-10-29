@@ -1,4 +1,6 @@
 <script>
+import { fade } from 'svelte/transition';
+let options = { duration: 2000 };
 export let quotes=[]
 
 let quote = getRandomQuote(quotes)
