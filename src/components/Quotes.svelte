@@ -19,11 +19,10 @@ async function getQuotes() {
   {#await gettingQuotes}
   <blockquote>
     <p id="quote">
-      You can't go back and change the beggining, but you can start where you are and change
-      the ending
+      If you don’t know where you’re going, any road will take you there
     </p>
   </blockquote>
-  <p id="author">C. S. Lewis</p>
+  <p id="author">Lewis Carroll</p>
   {:then quotes}
   <Quote {quotes}/>
   {:catch error}

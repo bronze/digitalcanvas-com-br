@@ -2,7 +2,7 @@
 import Picture from '../components/Picture.astro'
 import {GoogleFontsOptimizer} from 'astro-google-fonts-optimizer'
 import '../styles/styles.scss'
-import AppSvelte from '../components/AppQuotes.svelte'
+import Quotes from '../components/Quotes.svelte'
 
 //https://dev.to/ringmaster/build-a-random-quote-machine-with-svelte-and-parcel-4l4c
 ---
@@ -41,7 +41,7 @@ import AppSvelte from '../components/AppQuotes.svelte'
         <header>
           <h1>digitalcanvas</h1>
         </header>
-        <AppSvelte client:load />
+        <Quotes client:load />
         <!-- <section>
           <blockquote>
             <p id="quote">
