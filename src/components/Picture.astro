@@ -41,11 +41,11 @@ const {image = {}, sources = []} = picture || {}
 
 {
   src && image?.src && (
-    <picture {...attrs}>
+    <picture >
       {sources.map(attrs => (
         <source {...attrs} sizes={sizes} />
       ))}
-      <img {...image} {loading} {decoding} {alt} class={className} onerror=`'this.onerror=null;this.src=${onerror}';` />
+      <img {...image} {loading} {decoding} {alt} {...attrs} class={className} onerror=`'this.onerror=null;this.src=${onerror}';` />
     </picture>
   )
 }
