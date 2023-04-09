@@ -28,6 +28,10 @@ const generateQuote = function () {
     {
       quote: "If you don’t know where you’re going, any road will take you there",
       author: "Lewis Carroll"
+    },
+    {
+      quote: "A goal without a plan is just a wish",
+      author: "Antoine de Saint-Exupéry"
     }
   ];
 
