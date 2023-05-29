@@ -1,7 +1,7 @@
 // https://dev.to/stackfindover/how-to-build-a-javascript-random-quote-generator-2ao4
 // https://blog.stackfindover.com/how-to-build-a-javascript-random-quote-generator/
 //Use an array to hold the value of the quotes
-const arrayOfQuotes = [{
+const arrayOfQuotes=[{
   "quoteText": "It's kind of fun to do the impossible",
   "quoteAuthor": "Walt Disney"
 }, {
@@ -22,22 +22,25 @@ const arrayOfQuotes = [{
 }, {
   "quoteText": "If you don’t know where you’re going, any road will take you there",
   "quoteAuthor": "Lewis Carroll"
+}, {
+  "quoteText": "A goal without a plan is just a wish",
+  "quoteAuthor": "Antoine de Saint-Exupéry"
 }];
 
 function generateQuote() {
-  const random = Number.parseInt(Math.random() * arrayOfQuotes.length);
+  const random=Number.parseInt(Math.random()*arrayOfQuotes.length);
   document.querySelector(
     "#quote"
-  ).textContent = `${arrayOfQuotes[random].quoteText}`;
+  ).textContent=`${arrayOfQuotes[random].quoteText}`;
   document.querySelector(
     "#by"
-  ).textContent = `${arrayOfQuotes[random].quoteAuthor}`;
+  ).textContent=`${arrayOfQuotes[random].quoteAuthor}`;
 }
 function ready(fn) { // https://youmightnotneedjquery.com/#ready
-  if (document.readyState != 'loading') {
+  if (document.readyState!='loading') {
     fn();
   } else {
     document.addEventListener('DOMContentLoaded', fn);
   }
 }
-ready(function () { generateQuote(); });
+ready(function () {generateQuote();});

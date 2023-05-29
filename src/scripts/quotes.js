@@ -1,6 +1,6 @@
 // https://blog.kritikapattalam.com/build-a-random-quote-generator-using-javascript
-const generateQuote = function () {
-  const quotes = [
+const generateQuote=function () {
+  const quotes=[
     {
       quote: "It's kind of fun to do the impossible",
       author: "Walt Disney"
@@ -28,14 +28,18 @@ const generateQuote = function () {
     {
       quote: "If you don’t know where you’re going, any road will take you there",
       author: "Lewis Carroll"
+    },
+    {
+      quote: "A goal without a plan is just a wish",
+      author: "Antoine de Saint-Exupéry"
     }
   ];
 
-  let arrayIndex = Math.floor(Math.random() * quotes.length);
-  document.getElementById("quote").innerHTML = quotes[arrayIndex].quote;
-  document.getElementById("author").innerHTML = quotes[arrayIndex].author;
+  let arrayIndex=Math.floor(Math.random()*quotes.length);
+  document.getElementById("quote").innerHTML=quotes[arrayIndex].quote;
+  document.getElementById("author").innerHTML=quotes[arrayIndex].author;
 
 }
-window.onload = function () {
+window.onload=function () {
   generateQuote();
 }
