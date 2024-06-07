@@ -16,7 +16,7 @@
   "devDependencies": {
     "@unocss/transformer-directives": "^0.52.4",
     "astro": "^2.5.5",
-    "autoprefixer": "^10.4.13",
+    "autoprefixer": "^10.4.14",
     "postcss-preset-env": "^8.4.1",
     "prettier-plugin-astro": "^0.9.1",
     "sass": "^1.62.1",

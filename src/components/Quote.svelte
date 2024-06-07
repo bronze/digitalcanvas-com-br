@@ -3,7 +3,7 @@ import { fade } from 'svelte/transition';
 let options = { duration: 2000 };
 export let quotes=[]
 
-let quote = getRandomQuote(quotes)
+let quote = getRandomQuote(getRandomQuote)
 
 function getRandomQuote(quotes){
   return quotes[Math.floor(Math.random() * quotes.length)]

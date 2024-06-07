@@ -1,34 +1,30 @@
 <script>
-import Quote from "./Quote.svelte"
-let gettingQuotes = getQuotes()
-import { fade } from 'svelte/transition';
-let visible = false;
+  import Quote from './Quote.svelte'
+  let gettingQuotes = getQuotes()
+  import {fade} from 'svelte/transition'
+  let visible = false
 
-async function getQuotes() {
-  const response = await fetch("./quotes.json")
-  const data = await response.json()
+  async function getQuotes() {
+    const response = await fetch('./quotes.json')
+    const data = await response.json()
 
-  if(response.ok) {
-    return data
+    if (response.ok) {
+      return data
+    } else {
+      throw new Error(data)
+    }
   }
-  else {
-    throw new Error(data)
-  }
-}
 </script>
 
 <section>
   {#await gettingQuotes}
-  <blockquote>
-    <p id="quote">
-      If you don’t know where you’re going, any road will take you there
-    </p>
-  </blockquote>
-  <p id="author">Lewis Carroll</p>
-
+    <blockquote>
+      <p id="quote">If you don’t know where you’re going, any road will take you there</p>
+    </blockquote>
+    <p id="author">Lewis Carroll</p>
   {:then quotes}
-  <Quote {quotes}/>
+    <Quote {quotes} />
   {:catch error}
-  <p>{error.message}</p>
+    <p>{error.message}</p>
   {/await}
 </section>

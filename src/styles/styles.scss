@@ -55,6 +55,7 @@ section {
 blockquote {
   @apply flex font-bold text-4xl clear-right;
   quotes: '\201C''\201E''\2018''\2019'; // https://www.w3schools.com/cssref/pr_gen_quotes.asp
+  position: relative;
   p:before {
     content: open-quote;
     font-family: 'Times New Roman';
@@ -67,7 +68,7 @@ blockquote {
     content: close-quote;
     font-family: 'Times New Roman';
     font-size: 2.5em;
-    position: relative;
+    position: absolute;
     top: 0.5rem;
     line-height: 0.1em;
   }
