@@ -8,12 +8,14 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "prod": "astro build && jampack ./dist",
     "preview": "astro preview",
     "astro": "astro"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@divriots/jampack": "^0.24.4",
     "astro": "^4.10.0",
     "autoprefixer": "^10.4.19",
     "postcss-preset-env": "^9.5.14",

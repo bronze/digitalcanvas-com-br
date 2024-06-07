@@ -57,25 +57,9 @@ section {
   font-family: 'Nunito', sans-serif;
 }
 blockquote {
-  @apply flex font-bold text-4xl clear-right;
-  // quotes: '\201C''\201E''\2018''\2019'; // https://www.w3schools.com/cssref/pr_gen_quotes.asp
-  // position: relative;
-  // p:before {
-  //   content: open-quote;
-  //   font-family: 'Times New Roman';
-  //   font-size: 2.5em;
-  //   position: relative;
-  //   top: 1.5rem;
-  //   line-height: 0.1em;
-  // }
-  // p:after {
-  //   content: close-quote;
-  //   font-family: 'Times New Roman';
-  //   font-size: 2.5em;
-  //   position: absolute;
-  //   top: 0.5rem;
-  //   line-height: 0.1em;
-  // }
+  p {
+    text-wrap: balance;
+  }
 }
 #quote-author {
   @apply mt-4;
@@ -122,6 +106,7 @@ footer.unsplash {
 }
 h1 {
   font-size: clamp(1.25rem, 1.59vw + 0.85rem, 2.13rem);
+  font-weight: 700;
 }
 #quote-text {
   font-size: clamp(1.56rem, 2.31vw + 0.99rem, 2.83rem);
