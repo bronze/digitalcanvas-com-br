@@ -2,8 +2,9 @@ import {defineConfig} from 'astro/config';
 import compress from "astro-compress";
 import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
-
 import icon from "astro-icon";
+
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,5 +19,7 @@ export default defineConfig({
     // JavaScript: false,
     // SVG: false,
   })],
-  site: 'https://www.digitalcanvas.com.br/'
+  site: 'https://www.digitalcanvas.com.br/',
+  output: "server",
+  adapter: netlify()
 });
