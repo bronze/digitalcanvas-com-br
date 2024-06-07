@@ -14,23 +14,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@unocss/transformer-directives": "^0.52.4",
-    "astro": "^2.5.5",
-    "autoprefixer": "^10.4.14",
-    "postcss-preset-env": "^8.4.1",
-    "prettier-plugin-astro": "^0.9.1",
-    "sass": "^1.62.1",
-    "unocss": "^0.52.4"
+    "astro": "^4.10.0",
+    "autoprefixer": "^10.4.19",
+    "postcss-preset-env": "^9.5.14",
+    "prettier-plugin-astro": "^0.14.0",
+    "sass": "^1.77.4"
   },
   "dependencies": {
-    "@astrojs/image": "^0.16.9",
-    "@astrojs/sitemap": "^1.3.1",
-    "@astrojs/svelte": "^2.2.0",
-    "@fontsource/nunito": "^5.0.1",
-    "astro-compress": "1.1.46",
-    "astro-critters": "^1.1.35",
+    "@astrojs/sitemap": "^3.1.5",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/nunito": "^5.0.18",
+    "astro-compress": "2.2.26",
+    "astro-critters": "^2.1.9",
     "astro-google-fonts-optimizer": "^0.2.2",
-    "astro-icon": "^0.8.0",
-    "svelte": "^3.59.1"
+    "astro-icon": "^1.1.0",
+    "tailwindcss": "^3.4.4"
   }
 }

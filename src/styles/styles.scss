@@ -2,6 +2,10 @@
 @import '@fontsource/nunito/400.css';
 @import '@fontsource/nunito/700.css';
 /* src/styles/global.css */
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body * {
   line-height: calc(2px + 2ex + 2px);
@@ -54,35 +58,35 @@ section {
 }
 blockquote {
   @apply flex font-bold text-4xl clear-right;
-  quotes: '\201C''\201E''\2018''\2019'; // https://www.w3schools.com/cssref/pr_gen_quotes.asp
-  position: relative;
-  p:before {
-    content: open-quote;
-    font-family: 'Times New Roman';
-    font-size: 2.5em;
-    position: relative;
-    top: 1.5rem;
-    line-height: 0.1em;
-  }
-  p:after {
-    content: close-quote;
-    font-family: 'Times New Roman';
-    font-size: 2.5em;
-    position: absolute;
-    top: 0.5rem;
-    line-height: 0.1em;
-  }
+  // quotes: '\201C''\201E''\2018''\2019'; // https://www.w3schools.com/cssref/pr_gen_quotes.asp
+  // position: relative;
+  // p:before {
+  //   content: open-quote;
+  //   font-family: 'Times New Roman';
+  //   font-size: 2.5em;
+  //   position: relative;
+  //   top: 1.5rem;
+  //   line-height: 0.1em;
+  // }
+  // p:after {
+  //   content: close-quote;
+  //   font-family: 'Times New Roman';
+  //   font-size: 2.5em;
+  //   position: absolute;
+  //   top: 0.5rem;
+  //   line-height: 0.1em;
+  // }
 }
-#author {
+#quote-author {
   @apply mt-4;
 }
-#author:before {
+#quote-author:before {
   content: '― ';
 }
 .animate {
   animation-delay: 0.3s;
 }
-footer {
+footer.unsplash {
   @apply absolute bottom-4 right-4;
   &.unsplash {
     a {
@@ -119,7 +123,7 @@ footer {
 h1 {
   font-size: clamp(1.25rem, 1.59vw + 0.85rem, 2.13rem);
 }
-#quote {
+#quote-text {
   font-size: clamp(1.56rem, 2.31vw + 0.99rem, 2.83rem);
 }
 #by {

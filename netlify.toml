@@ -1,5 +1,6 @@
 [build.environment]
-  NODE_VERSION = "16"
+  NODE_VERSION = "18.17.1"
+
 
 [build]
   publish = "dist"
@@ -7,11 +8,12 @@
   functions = "functions/"
 
 [dev]
-  autoLaunch = false
+  autoLaunch = true
   # command = "pnpm run dev"
-  framework = "#custom"
-  targetPort = 3000
-  command = "astro dev"
+  framework = "astro" # #custom
+  command = "pnpm run dev"
+  targetPort = 4321
+
 
 [[redirects]]
   from = "/*"
