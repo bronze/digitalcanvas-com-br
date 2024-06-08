@@ -1,21 +1,40 @@
 [build.environment]
   NODE_VERSION = "18.17.1"
 
-
 [build]
   publish = "dist"
-  command = "pnpm build || ( npm install pnpm && pnpm build )"
+  command = "pnpm prod || ( npm install pnpm && pnpm prod )"
   functions = "functions/"
 
 [dev]
   autoLaunch = true
-  # command = "pnpm run dev"
-  framework = "astro" # #custom
+  framework = "astro"
   command = "pnpm run dev"
   targetPort = 4321
-
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Clacks-Overhead = "GNU Terry Pratchett"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Accept-CH = "Downlink,RTT,Device-Memory,Save-Data,DPR,Width"
+    Permissions-Policy = "autoplay=(), camera=(), geolocation=(), microphone=(), midi=(), usb=()"
+
+[[headers]]
+  for = "*.css" # Ensure this matches your CSS path
+  [headers.values]
+    Content-Type = "text/css"  # Ensures the correct MIME type for CSS files
+    Cache-Control = "max-age=604800, must-revalidate, public"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "max-age=604800, must-revalidate, public"
