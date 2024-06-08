@@ -3,7 +3,7 @@
 
 [build]
   publish = "dist"
-  command = "astro build"
+  command = "pnpm run prod"
 
 [dev]
   autoLaunch = true
