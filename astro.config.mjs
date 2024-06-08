@@ -10,7 +10,7 @@ import compress from "astro-compress";
 export default defineConfig({
   site: 'https://www.digitalcanvas.com.br/',
   build: {
-    assets: 'assets',
+    assets: 'assets'
   },
   integrations: [icon(), tailwind({
     // Example: Disable injecting a basic `base.css` import on every page.
@@ -19,10 +19,12 @@ export default defineConfig({
   }), sitemap(), alpinejs(), compress({
     // CSS: false,
     HTML: true,
-    Image: false,
+    Image: false
     // JavaScript: false,
     // SVG: false,
   })],
   output: "server",
-  adapter: netlify(),
+  adapter: netlify({
+    imageCDN: false
+  })
 });
