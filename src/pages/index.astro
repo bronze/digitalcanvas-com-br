@@ -1,10 +1,8 @@
 ---
-export const prerender = true
+
 import Layout from '~layouts/Layout.astro'
 import Quotes from '~components/Quotes.astro'
-import {Picture} from 'astro:assets'
-import myImage from '../assets/ales-nesetril-Im7lZjxeLhg-unsplash.jpg' // Image is 1600x900
-const {quote, author} = Astro.locals // Ensure Astro.locals is used
+import Laptop from '~components/Laptop.astro'
 
 // import {GoogleFontsOptimizer} from 'astro-google-fonts-optimizer'
 // https://dev.to/ringmaster/build-a-random-quote-machine-with-svelte-and-parcel-4l4c
@@ -12,16 +10,7 @@ const {quote, author} = Astro.locals // Ensure Astro.locals is used
 ---
 
 <Layout>
-  <Picture
-    src={myImage}
-    alt="Laptop"
-    width={1200}
-    height={850}
-    formats={['avif', 'webp', 'png']}
-    widths={[300, 600, 900, 1200, myImage.width]}
-    loading="eager"
-    sizes="100vw"
-  />
+  <Laptop />
   <div>
     <header>
       <h1>digitalcanvas</h1>

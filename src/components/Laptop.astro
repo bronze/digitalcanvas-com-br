@@ -1,0 +1,16 @@
+---
+export const prerender = true
+import {Picture} from 'astro:assets'
+import myImage from '../assets/ales-nesetril-Im7lZjxeLhg-unsplash.jpg'
+---
+
+<Picture
+  src={myImage}
+  alt="Laptop"
+  width={1200}
+  height={850}
+  formats={['avif', 'webp', 'png']}
+  widths={[300, 600, 900, 1200, myImage.width]}
+  loading="eager"
+  sizes="100vw"
+/>
