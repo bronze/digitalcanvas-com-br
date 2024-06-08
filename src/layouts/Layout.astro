@@ -1,0 +1,28 @@
+---
+import '../styles/styles.scss'
+
+// import {GoogleFontsOptimizer} from 'astro-google-fonts-optimizer'
+// https://dev.to/ringmaster/build-a-random-quote-machine-with-svelte-and-parcel-4l4c
+// https://gist.github.com/blacksector/2ef094ff9035b12db7f25d14bac9f465
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="author" content="Carlos Bronze" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="theme-color" content="#000000" />
+    <title>digitalcanvas</title>
+    <meta name="description" content="Playground de testes." />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-icon.png" />
+    <script defer data-domain="digitalcanvas.com.br" src="/js/script.js"></script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

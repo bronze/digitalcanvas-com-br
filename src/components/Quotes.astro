@@ -1,0 +1,87 @@
+---
+// @ts-ignore
+import {Icon} from 'astro-icon'
+const {quote, author} = Astro.props
+---
+
+<section>
+  <div class="mx-auto max-w-screen-xl relative px-12">
+    <blockquote
+      class="flex cursor-auto flex-col py-[calc(4vmin+2em)] font-semibold"
+      id="quote-block">
+      <p class="relative pb-4 ftext-4xl" id="quote-text">
+        {quote}
+      </p>
+      <footer class="mt-4 block max-w-[70%] pb-12 not-italic">
+        <span class="mb-1 block text-2xl" id="quote-author">
+          {author}
+        </span>
+      </footer>
+    </blockquote>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 480px) {
+    blockquote p::after {
+      position: absolute;
+      right: 0rem;
+    }
+  }
+  @media (min-width: 481px) {
+    blockquote p::after {
+      position: relative;
+      left: -1rem;
+      top: 3.5rem;
+    }
+  }
+  blockquote {
+    --calc: clamp(2.125rem, 1.538rem + 2.9348vw, 3.8125rem);
+    margin-top: calc(var(--calc) * 3);
+    margin-bottom: calc(var(--calc) * 1);
+  }
+
+  blockquote p {
+    position: relative;
+  }
+
+  blockquote p::before,
+  blockquote p::after {
+    content: '';
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: var(--calc);
+    height: calc(var(--calc) * 0.75741);
+    aspect-ratio: 200/150;
+    mask-image: url('../icons/quotes.svg'); /* Correct use of mask-image */
+    mask-size: cover;
+    display: inline-block;
+    position: absolute;
+    background-color: currentColor; /* Use current text color for masking */
+  }
+
+  blockquote p::before {
+    top: calc(var(--calc) * -1);
+    left: -2rem;
+  }
+
+  blockquote p::after {
+    bottom: calc(var(--calc) * -1);
+    transform: rotate(180deg);
+  }
+
+  @media (max-width: 480px) {
+    blockquote p::after {
+      position: absolute;
+      right: 0rem;
+    }
+  }
+
+  @media (min-width: 481px) {
+    blockquote p::after {
+      position: relative;
+      left: -1rem;
+      top: 3.5rem;
+    }
+  }
+</style>

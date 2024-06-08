@@ -1,27 +1,39 @@
 {
   "name": "digitalcanvas-com-br",
-  "version": "22.0.0",
+  "version": "22.9.0",
   "private": true,
+  "description": "",
+  "format": "pnpm prettier -w .",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "critical": "node critical.js",
-    "prod": "astro build && npm run critical",
-    "preview": "astro preview"
+    "prod": "astro build && jampack ./dist",
+    "preview": "astro preview",
+    "astro": "astro"
   },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "astro": "^0.26.1",
-    "astro-icon": "^0.7.1",
-    "autoprefixer": "^10.4.4",
-    "critical": "^4.0.1",
-    "postcss-preset-env": "^7.4.3",
-    "sass": "^1.49.11",
-    "tailwindcss": "^3.0.23"
+    "@divriots/jampack": "^0.24.4",
+    "astro": "^4.10.0",
+    "autoprefixer": "^10.4.19",
+    "postcss-preset-env": "^9.5.14",
+    "prettier-plugin-astro": "^0.14.0",
+    "sass": "^1.77.4"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^0.1.0",
-    "@astrojs/tailwind": "^0.1.0",
-    "astro-imagetools": "^0.4.1"
+    "@astrojs/alpinejs": "^0.4.0",
+    "@astrojs/netlify": "^5.2.1",
+    "@astrojs/sitemap": "^3.1.5",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/nunito": "^5.0.18",
+    "@types/alpinejs": "^3.13.10",
+    "alpinejs": "^3.14.0",
+    "astro-compress": "2.2.26",
+    "astro-critters": "^2.1.9",
+    "astro-google-fonts-optimizer": "^0.2.2",
+    "astro-icon": "^1.1.0",
+    "tailwindcss": "^3.4.4"
   }
 }

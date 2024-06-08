@@ -1,9 +1,15 @@
 [build.environment]
-  NODE_VERSION = "16"
+  NODE_VERSION = "18.17.1"
 
 [build]
   publish = "dist"
-  command = "npm run prod"
+  command = "pnpm prod || ( npm install pnpm && pnpm prod )"
+
+[dev]
+  autoLaunch = true
+  framework = "astro"
+  command = "pnpm run dev"
+  targetPort = 4321
 
 [[redirects]]
   from = "/*"
@@ -11,31 +17,24 @@
   status = 200
 
 [[headers]]
-  for = "/manifest.webmanifest"
-  [headers.values]
-    Content-Type = "application/manifest+json"
-
-[[headers]]
   for = "/*"
   [headers.values]
+    X-Clacks-Overhead = "GNU Terry Pratchett"
     X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
-    # X-Content-Type-Options = "nosniff"
-    # https://report-uri.com/home/generate
-    Content-Security-Policy = ""
-    #Content-Security-Policy = "default-src 'self' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com *.cloudfront.net; prefetch-src 'self'; connect-src 'self' google-analytics.com *.google-analytics.com; img-src 'self' 'unsafe-inline' *.google-analytics.com; media-src 'self' *.youtube.com; style-src 'self' 'unsafe-inline' googleapis.com *.googleapis.com cloudfront.net *.cloudfront.net; script-src 'self' 'unsafe-inline' *.google-analytics.com  *.googletagmanager.com *.cloudfront.net; frame-src 'self' https://www.youtube.com/ https://vimeo.com; form-action 'self' https:; object-src 'none'; require-trusted-types-for 'script';"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     Accept-CH = "Downlink,RTT,Device-Memory,Save-Data,DPR,Width"
-    # Permissions-Policy = "vibrate 'none'; geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'none'; payment 'none'"
     Permissions-Policy = "autoplay=(), camera=(), geolocation=(), microphone=(), midi=(), usb=()"
 
-# https://codewithhugo.com/enable-cdn-netlify/
 [[headers]]
-  for = "*.css"
+  for = "*.css" # Ensure this matches your CSS path
   [headers.values]
+    Content-Type = "text/css"  # Ensures the correct MIME type for CSS files
     Cache-Control = "max-age=604800, must-revalidate, public"
+
 [[headers]]
   for = "*.js"
   [headers.values]
+    Content-Type = "text/javascript"
     Cache-Control = "max-age=604800, must-revalidate, public"

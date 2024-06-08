@@ -1,0 +1,10 @@
+"permissions": [
+  "tabs",
+  "bookmarks",
+  "unlimitedStorage",
+  "*://localhost/*",
+  "*://digitalcanvas.com.br/*",
+],
+"host_permissions": [
+  "*://localhost/*"
+],
