@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "moduleResolution": "node",
-    "target": "ESNext",
-    "types": ["vite/client", "node"],
+    "types": ["astro/client"],
+    "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
-      "$components/*": ["src/components/*"],
-      "$pages/*": ["src/pages/*"],
-      "$utils": ["src/utils/index.ts"]
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@assets/*": ["src/assets/*"],
+      "@pages/*": ["src/pages/*"],
+      "~/*": ["*"]
     }
   },
   "exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]

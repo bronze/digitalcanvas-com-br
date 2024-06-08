@@ -4,7 +4,6 @@
 [build]
   publish = "dist"
   command = "pnpm prod || ( npm install pnpm && pnpm prod )"
-  functions = "functions/"
 
 [dev]
   autoLaunch = true
@@ -37,4 +36,5 @@
 [[headers]]
   for = "*.js"
   [headers.values]
+    Content-Type = "text/javascript"
     Cache-Control = "max-age=604800, must-revalidate, public"

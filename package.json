@@ -23,10 +23,13 @@
     "sass": "^1.77.4"
   },
   "dependencies": {
+    "@astrojs/alpinejs": "^0.4.0",
     "@astrojs/netlify": "^5.2.1",
     "@astrojs/sitemap": "^3.1.5",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/nunito": "^5.0.18",
+    "@types/alpinejs": "^3.13.10",
+    "alpinejs": "^3.14.0",
     "astro-compress": "2.2.26",
     "astro-critters": "^2.1.9",
     "astro-google-fonts-optimizer": "^0.2.2",

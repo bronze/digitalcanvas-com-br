@@ -1,73 +1,47 @@
 ---
-import '../styles/styles.scss'
+export const prerender = false
+import Layout from '@layouts/Layout.astro'
 import Quotes from '../components/Quotes.astro'
 import {Picture} from 'astro:assets'
 import myImage from '../assets/ales-nesetril-Im7lZjxeLhg-unsplash.jpg' // Image is 1600x900
+const {quote, author} = Astro.locals // Ensure Astro.locals is used
 
 // import {GoogleFontsOptimizer} from 'astro-google-fonts-optimizer'
 // https://dev.to/ringmaster/build-a-random-quote-machine-with-svelte-and-parcel-4l4c
 // https://gist.github.com/blacksector/2ef094ff9035b12db7f25d14bac9f465
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="author" content="Carlos Bronze" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="revisit-after" content="7 days" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="msapplication-TileColor" content="#000000" />
-    <meta name="theme-color" content="#000000" />
-    <title>digitalcanvas</title>
-    <meta name="description" content="Playground de testes." />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-icon.png" />
-    <script defer data-domain="digitalcanvas.com.br" src="/js/script.js"></script>
-  </head>
-  <body>
-    <div>
-      <Picture
-        src={myImage}
-        alt="Laptop"
-        width={1200}
-        height={850}
-        formats={['avif', 'webp', 'png']}
-        widths={[300, 600, 900, 1200, 1500]}
-        loading="eager"
-        sizes="100vw"
-        onerror="/android-icon-96x96.png"
-      />
-      <div>
-        <header>
-          <h1>digitalcanvas</h1>
-        </header>
-        <Quotes />
-        <!-- <section>
-          <blockquote>
-            <p id="quote">
-              You can't go back and change the beggining, but you can start where you are and change
-              the ending
-            </p>
-          </blockquote>
-          <p id="author">C. S. Lewis</p>
-        </section> -->
-        <footer class="unsplash">
-          <a
-            href="https://unsplash.com/@alesnesetril?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Download free do whatever you want high-resolution photos from Ales Nesetril">
-            <span class="svg">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                <title>unsplash-logo</title>
-                <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
-              </svg>
-            </span>
-            <span class="credits">Ales Nesetril</span>
-          </a>
-        </footer>
-      </div>
-    </div>
-  </body>
-</html>
+<Layout>
+  <Picture
+    src={myImage}
+    alt="Laptop"
+    width={1200}
+    height={850}
+    formats={['avif', 'webp', 'png']}
+    widths={[300, 600, 900, 1200, 1500]}
+    loading="eager"
+    sizes="100vw"
+    onerror="/android-icon-96x96.png"
+  />
+  <div>
+    <header>
+      <h1>digitalcanvas</h1>
+    </header>
+    <Quotes quote={quote} author={author} />
+    <footer class="unsplash">
+      <a
+        href="https://unsplash.com/@alesnesetril?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Download free do whatever you want high-resolution photos from Ales Nesetril">
+        <span class="svg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+            <title>unsplash-logo</title>
+            <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path>
+          </svg>
+        </span>
+        <span class="credits">Ales Nesetril</span>
+      </a>
+    </footer>
+  </div>
+</Layout>
