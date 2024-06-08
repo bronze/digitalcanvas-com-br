@@ -13,6 +13,6 @@ export default defineConfig({
     applyBaseStyles: true
   }), sitemap()],
   site: 'https://www.digitalcanvas.com.br/',
-  output: "hybrid",
+  output: "server",
   adapter: netlify()
 });
