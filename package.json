@@ -8,7 +8,6 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "prod": "astro build && jampack ./dist",
     "preview": "astro preview",
     "astro": "astro"
   },

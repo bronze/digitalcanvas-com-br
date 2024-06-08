@@ -1,9 +1,9 @@
 [build.environment]
-  NODE_VERSION = "18.17.1"
+  NODE_VERSION = "20.14.0"
 
 [build]
   publish = "dist"
-  command = "pnpm prod || ( npm install pnpm && pnpm prod )"
+  command = "astro build"
 
 [dev]
   autoLaunch = true
@@ -22,6 +22,7 @@
     X-Clacks-Overhead = "GNU Terry Pratchett"
     X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = ""
     Referrer-Policy = "strict-origin-when-cross-origin"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     Accept-CH = "Downlink,RTT,Device-Memory,Save-Data,DPR,Width"

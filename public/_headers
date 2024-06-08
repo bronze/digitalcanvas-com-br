@@ -4,5 +4,8 @@
 /*.css
   Content-Type: text/css
 
+/assets/*.css
+  Content-Type: text/css
+
 /*.js
   Content-Type: text/javascript
