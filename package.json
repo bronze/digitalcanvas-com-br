@@ -27,6 +27,7 @@
     "@astrojs/netlify": "^5.2.1",
     "@astrojs/sitemap": "^3.1.5",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/nunito": "^5.0.19",
     "@fontsource/nunito": "^5.0.18",
     "@types/alpinejs": "^3.13.10",
     "alpinejs": "^3.14.0",
