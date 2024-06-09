@@ -1,7 +1,5 @@
-// src/middleware.js
-
-export async function onRequest(context, next) {
-  // Quotes array
+// netlify/functions/quote.js
+exports.handler=async function (event, context) {
   const quotes=[
     {"quote": "The only way to do great work is to love what you do.", "author": "Steve Jobs"},
     {"quote": "In three words I can sum up everything I've learned about life: it goes on.", "author": "Robert Frost"},
@@ -18,14 +16,10 @@ export async function onRequest(context, next) {
     {"quote": "If the path before you is clear, you're probably on someone else's.", "author": "Joseph Campbell"}
   ];
 
-  // Pick a random quote
-  const randomIndex=Math.floor(Math.random()*quotes.length);
-  const randomQuote=quotes[randomIndex];
+  const randomQuote=quotes[Math.floor(Math.random()*quotes.length)];
 
-  // Set the quote in context locals
-  context.locals.quote=randomQuote.quote;
-  context.locals.author=randomQuote.author;
-
-  // Call the next function in the middleware chain
-  return next();
-}
+  return {
+    statusCode: 200,
+    body: JSON.stringify(randomQuote)
+  };
+};

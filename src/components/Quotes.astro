@@ -1,7 +1,11 @@
 ---
-// @ts-ignore
-import {Icon} from 'astro-icon'
-const {quote, author} = Astro.locals // Ensure Astro.locals is used
+// src/components/Quote.astro
+
+// Fetch the quote from the Netlify function at build time
+const response = await fetch('http://www.digitalcanvas.com.br/.netlify/functions/quote')
+const data = await response.json()
+const quote = data.quote
+const author = data.author
 ---
 
 <section>

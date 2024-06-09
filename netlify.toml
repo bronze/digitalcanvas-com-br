@@ -4,12 +4,14 @@
 [build]
   publish = "dist"
   command = "pnpm run prod"
+  functions = "functions"
 
 [dev]
   autoLaunch = true
   framework = "astro"
   command = "pnpm run dev"
   targetPort = 4321
+  functions = "functions"
 
 [[redirects]]
   from = "/*"

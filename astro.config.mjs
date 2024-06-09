@@ -24,7 +24,5 @@ export default defineConfig({
     // SVG: false,
   })],
   output: "server",
-  adapter: netlify({
-    imageCDN: false
-  })
+  adapter: netlify()
 });
