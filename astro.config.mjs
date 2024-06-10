@@ -2,7 +2,6 @@ import {defineConfig} from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
-import netlify from "@astrojs/netlify";
 import alpinejs from "@astrojs/alpinejs";
 import compress from "astro-compress";
 
@@ -23,6 +22,5 @@ export default defineConfig({
     // JavaScript: false,
     // SVG: false,
   })],
-  output: "server",
-  adapter: netlify()
+  output: "static",
 });
